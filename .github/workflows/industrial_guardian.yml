@@ -1,0 +1,148 @@
+name: 🏛️ Chronolith Industrial Guardian
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  governance:
+    name: Personal Release Evidence Guard
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+        cache: pip
+    - name: Verify sanitized history-free release evidence
+      run: python scripts/verify_personal_release.py
+
+  # --- DNA Integrity Tests ---
+  test-lite:
+    name: 🛡️ Lite DNA Audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+        cache: pip
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install typer rich pytest
+    - name: Run Lite Tests (10 tests - RFC 6962 Merkle + Signatures)
+      run: pytest chronolith-lite/tests/test_lite_logic.py -v
+
+  test-pro:
+    name: 🏛️ Pro Parity Audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+        cache: pip
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest typer rich
+        cd chronolith-pro && pip install -e .
+    - name: Run Pro Tests (Parity + Membership + Integrity + Decisions)
+      run: pytest chronolith-pro/tests -v
+
+  test-omega:
+    name: 🧠 Omega Cognitive Audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+        cache: pip
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest networkx
+    - name: Run Omega Tests (Cognitive Map + Decisions)
+      run: pytest chronolith-omega/tests/test_omega_logic.py -v
+
+  core-parity:
+    name: 🧬 Cross-Edition Core Parity
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+        cache: pip
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest typer rich cryptography
+    - name: Verify the vendored DNA core has not drifted between editions
+      run: pytest tests/test_edition_parity.py -v
+
+  # --- Code Quality ---
+  lint:
+    name: 🔍 Code Quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+        cache: pip
+    - name: Install flake8
+      run: pip install flake8
+    - name: Lint (syntax errors only)
+      run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+    - name: Lint (warnings)
+      run: flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+  # --- Sentinel Parity ---
+  sentinel:
+    name: 🛰️ Sentinel DNA Check
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    needs: [test-lite, test-pro, test-omega]
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+        cache: pip
+    - name: Install Dependencies (Tokenator Engine)
+      run: |
+        python -m pip install --upgrade pip
+        pip install cryptography tiktoken rich typer
+        cd chronolith-pro && pip install -e .
+    - name: Verify DNA Parity & Tokenator Loop
+      env:
+        PYTHONPATH: ${{ github.workspace }}/chronolith-pro
+      run: python .github/scripts/crystalize.py

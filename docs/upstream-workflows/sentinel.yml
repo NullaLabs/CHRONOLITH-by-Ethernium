@@ -1,0 +1,74 @@
+name: 🛡️ Chronolith Sentinel
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  sentinel:
+    name: 🛰️ DNA Parity Sentinel
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout (Full History)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install cryptography tiktoken rich typer
+          cd chronolith-pro && pip install -e . || true
+
+      - name: Run Crystallizer (Verify + Update STATE.json)
+        env:
+          PYTHONIOENCODING: utf-8
+          CI: "false"
+        run: python .github/scripts/crystalize.py
+
+      - name: Push Updated State (if changed)
+        run: |
+          git config user.name "Chronolith Sentinel"
+          git config user.email "sentinel@chronolith-legacy.dev"
+          # Add only what exists. `git add a b missing` aborts on the missing
+          # pathspec and stages NOTHING, and `|| true` hid that. SESSION_TOKEN_
+          # REPORT.md is not in the repository, so every run staged nothing.
+          git add -- STATE.json README.md
+          if [ -f SESSION_TOKEN_REPORT.md ]; then
+            git add -- SESSION_TOKEN_REPORT.md
+          fi
+          # Ask about the INDEX, not the working tree. diff-index compared
+          # against HEAD and saw the crystallizer's edits, so it took the
+          # commit branch with an empty index — and `git commit` exits 1 with
+          # "no changes added to commit". That is the whole reason this job has
+          # been red on every single run.
+          if git diff --cached --quiet; then
+            echo "✔ No drift detected. State is pure."
+          else
+            git commit -m "sentinel: [AUTO] DNA Parity Crystallization 🛡️"
+            # Every push starts a sentinel run. When commits land in quick
+            # succession, a later one advances main while this run is still
+            # crystallizing, and the push is rejected as non-fast-forward.
+            # That is a scheduling race, not DNA drift — rebase onto whatever
+            # arrived and retry instead of reporting a red build for it.
+            for attempt in 1 2 3; do
+              if git push origin main; then
+                echo "✔ State crystallized and pushed."
+                exit 0
+              fi
+              echo "· push rejected (attempt $attempt); rebasing onto current main"
+              git pull --rebase origin main || exit 1
+            done
+            echo "::warning::sentinel could not push after 3 attempts; the next push recrystallizes"
+          fi

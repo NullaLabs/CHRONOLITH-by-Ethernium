@@ -1,0 +1,26 @@
+﻿{
+    "schema":  "ethernium.personal.provenance/1",
+    "repository":  "ETHERNIUM-PERSONAL-CHRONOLITH",
+    "component":  "chronolith",
+    "role":  "integrity_and_provenance",
+    "version":  "3.2.2",
+    "history_policy":  "sanitized_genesis",
+    "source":  {
+                   "repository":  "CHRONOLITH-by-Ethernium",
+                   "commit":  "cd63129",
+                   "snapshot_included_uncommitted_work":  false,
+                   "originals_mutated":  false
+               },
+    "sanitation":  {
+                       "runtime_state_excluded":  true,
+                       "secrets_excluded":  true,
+                       "absolute_machine_dependencies_removed":  true,
+                       "font_forge_in_scope":  false
+                   },
+    "verification":  {
+                         "status":  "passed",
+                         "command":  "python scripts/audit_all.py --install; python scripts/verify_personal_release.py",
+                         "note":  "Lite, Pro and Omega tests; core parity; clean install smoke; personal evidence guard passed."
+                     },
+    "generated_at":  "2026-07-22T01:27:31.7728160Z"
+}

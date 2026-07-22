@@ -1,0 +1,1614 @@
+﻿{
+    "schema":  "ethernium.personal.file-manifest/1",
+    "repository":  "ETHERNIUM-PERSONAL-CHRONOLITH",
+    "version":  "3.2.2",
+    "generated_at":  "2026-07-22T01:27:31.7728160Z",
+    "file_count":  321,
+    "files":  [
+                  {
+                      "path":  ".gitattributes",
+                      "bytes":  239,
+                      "sha256":  "2fb33de6ee1b50705707e663d593b2d6d68628f8fe4f701e4bd7eed76f8e4adf"
+                  },
+                  {
+                      "path":  ".github/scripts/audit_comparison.py",
+                      "bytes":  4353,
+                      "sha256":  "6d90e29798e399d5735f3723fe66d5ad32656ba58385be4bbd32e7f3b08540e4"
+                  },
+                  {
+                      "path":  ".github/scripts/crystalize.py",
+                      "bytes":  12545,
+                      "sha256":  "da555c5ab2833b71fadea1098c2a78c8f89f60f9c258ad192020668daa115113"
+                  },
+                  {
+                      "path":  ".github/scripts/deploy_sovereign.ps1",
+                      "bytes":  4105,
+                      "sha256":  "5d3f3d57f9ebe2c89c2465edee331eaf2d5548f121a061409cd972557de418c4"
+                  },
+                  {
+                      "path":  ".github/scripts/fidelity_sync.py",
+                      "bytes":  3340,
+                      "sha256":  "26bab16acd154918d8d23d6564228fa01caac3141190341c3dbd93d4fb564321"
+                  },
+                  {
+                      "path":  ".github/scripts/setup_guardian.py",
+                      "bytes":  1858,
+                      "sha256":  "74d323214c25d73f9b2b735a61f4d6a6867636c3cec8fa664d05859316f32924"
+                  },
+                  {
+                      "path":  ".github/scripts/slogan_injector.py",
+                      "bytes":  1269,
+                      "sha256":  "6ecad6d5b85f5c35f511acac29da100e0d17ac33c37ecfd2ab6307f6a14e6074"
+                  },
+                  {
+                      "path":  ".github/scripts/sync_master.py",
+                      "bytes":  5705,
+                      "sha256":  "34974cf02a94570f0f449a0d192c0f6cbfd67a43c91dabd572d079fe478b2b5e"
+                  },
+                  {
+                      "path":  ".github/scripts/systemic_enrichment.py",
+                      "bytes":  3348,
+                      "sha256":  "1bf5760108485e4d4c4c6bf467e0e542965ff68fd50d5cc64bf415322e0281c7"
+                  },
+                  {
+                      "path":  ".github/workflows/continuity-check.yml",
+                      "bytes":  3352,
+                      "sha256":  "73578270f52677828794bd26d69afa5e21adf01dfdc63da372108cac991d14c5"
+                  },
+                  {
+                      "path":  ".github/workflows/industrial_guardian.yml",
+                      "bytes":  4355,
+                      "sha256":  "1849beec2777445bbd98727f276de14160fae4c69f6d29d509520465823c682e"
+                  },
+                  {
+                      "path":  ".gitignore",
+                      "bytes":  1032,
+                      "sha256":  "0643b3b4225662d77fe283f49c2013096547b9843038b0315a5cb724162c4a51"
+                  },
+                  {
+                      "path":  "assets/banners/LEGACYlite.png",
+                      "bytes":  12490,
+                      "sha256":  "3eaee8a5e575c2d1423803dc65b1d0b841d99a82fe50f2d0b24ac1b59dc98cab"
+                  },
+                  {
+                      "path":  "assets/banners/LEGACYOMEGA.png",
+                      "bytes":  15109,
+                      "sha256":  "e319778bc92257023286b5ada76ff141eecd3b5edde16bf8199f04346d630ec4"
+                  },
+                  {
+                      "path":  "assets/banners/LEGACYPRO.png",
+                      "bytes":  13011,
+                      "sha256":  "fdd5042a2d2182a02d3df9790f1873ca4e9f1c36ffc22349abb3084865259818"
+                  },
+                  {
+                      "path":  "assets/LEGACYlite.png",
+                      "bytes":  15755,
+                      "sha256":  "c49ee1a87743d23b3455c584fbfd8cc4fcdf6482b51631b4374650f2be8770bb"
+                  },
+                  {
+                      "path":  "assets/LEGACYOMEGA.png",
+                      "bytes":  18086,
+                      "sha256":  "6531600112537c8c6dac1abb239d1f7f314d9c3b0c95ee6ac868c0ab35a419ee"
+                  },
+                  {
+                      "path":  "assets/LEGACYPRO.png",
+                      "bytes":  17469,
+                      "sha256":  "9876fd93efb9a619d6ef912d1bf714a1cd9ea98814f2ba7908c7d7f5db5dc4ef"
+                  },
+                  {
+                      "path":  "banners/ethernium_header.png",
+                      "bytes":  87694,
+                      "sha256":  "145ee933f65db89869afe10319bba279ce2b92431acff1d0f576b1cf00b1e9e8"
+                  },
+                  {
+                      "path":  "banners/ethernium_logo.png",
+                      "bytes":  87694,
+                      "sha256":  "145ee933f65db89869afe10319bba279ce2b92431acff1d0f576b1cf00b1e9e8"
+                  },
+                  {
+                      "path":  "BENCHMARKS.md",
+                      "bytes":  1516,
+                      "sha256":  "c43eaccfc31ef4be4bfe127ef28fec12df1fdba52367512493fcd52ca1712507"
+                  },
+                  {
+                      "path":  "BUILD_DISCIPLINE.md",
+                      "bytes":  3607,
+                      "sha256":  "b60a559adf9c6af66b2a758879931fc77b14ea3a95a3180725fcb97df84bb756"
+                  },
+                  {
+                      "path":  "CASE_STUDY_DRIFT.md",
+                      "bytes":  2426,
+                      "sha256":  "a4803e23641a7d775d645c2e81c1991f10eda2549c9da2101251ade79d637fe2"
+                  },
+                  {
+                      "path":  "CHANGELOG.md",
+                      "bytes":  6198,
+                      "sha256":  "32589133fffc84935bf268f53e47a9517ca05a607b9b0dfc179be2fa64e1ab01"
+                  },
+                  {
+                      "path":  "chronolith-lite/.gitignore",
+                      "bytes":  140,
+                      "sha256":  "39c2ddb90f1670c434d77ca148e63412ee4157debf9bf4bebea78f8c10ba6ccd"
+                  },
+                  {
+                      "path":  "chronolith-lite/chronolith_lite/chronolith/run_chronolith_lite.py",
+                      "bytes":  15745,
+                      "sha256":  "d07c3775c574076ce29abe5f9ffbc874446e89f48b16b50bbbc42d546752b234"
+                  },
+                  {
+                      "path":  "chronolith-lite/chronolith_lite/chronolith/sync_translations.py",
+                      "bytes":  4131,
+                      "sha256":  "098d38f66dc66878b97efbb2729036a4379c5800f5e097ee50e8b49b16de4801"
+                  },
+                  {
+                      "path":  "chronolith-lite/examples/basic_session.py",
+                      "bytes":  577,
+                      "sha256":  "9f50fca9df38842ca78abb293fadbc7cce929d36ae10b951866153d6f77a843a"
+                  },
+                  {
+                      "path":  "chronolith-lite/examples/dna_inspection.py",
+                      "bytes":  667,
+                      "sha256":  "3524b9e26f38b2eecd179daccc4fb896aeb994dfc7078ec6a3332fb36ac0e796"
+                  },
+                  {
+                      "path":  "chronolith-lite/examples/setup_dna_guardian.py",
+                      "bytes":  629,
+                      "sha256":  "42878264863b4dafa406a3685e4d4acef66fbfe0f8cc9b5ee7c34fd8a04bf586"
+                  },
+                  {
+                      "path":  "chronolith-lite/install_lite.ps1",
+                      "bytes":  1821,
+                      "sha256":  "95c038b1130465ef5233dc816dcd04999ea30c490d97a53c102772444e996a60"
+                  },
+                  {
+                      "path":  "chronolith-lite/LICENSE",
+                      "bytes":  1092,
+                      "sha256":  "363cc05958477e0116d91c0d8d8f7ac02077edb313c43e14a42370d738f7a829"
+                  },
+                  {
+                      "path":  "chronolith-lite/LIVE_HANDOFF.md",
+                      "bytes":  82,
+                      "sha256":  "37bea4a1ec66e996a523f80e88d931f9388aee16c84dd8f4cc0fde12e5f64e7a"
+                  },
+                  {
+                      "path":  "chronolith-lite/OTHER_LANGUAGES/README_ar.md",
+                      "bytes":  4727,
+                      "sha256":  "9d9bffd8940cb1351457ce9f95a750b512949278dd9d4f979f5d20fe3e1752cb"
+                  },
+                  {
+                      "path":  "chronolith-lite/OTHER_LANGUAGES/README_de.md",
+                      "bytes":  3174,
+                      "sha256":  "dc739741897948ff4b6cd8a1ebd96f8f7099aec4b5db4d929222b770e2943dd4"
+                  },
+                  {
+                      "path":  "chronolith-lite/OTHER_LANGUAGES/README_en.md",
+                      "bytes":  3174,
+                      "sha256":  "31ae8d4ac7f4d5b63f9f13679a14a3536af476557d427038ff13eccc43e28f3a"
+                  },
+                  {
+                      "path":  "chronolith-lite/OTHER_LANGUAGES/README_es.md",
+                      "bytes":  3310,
+                      "sha256":  "95570b313d256bfd1fa51d4964db120b8b6f58b0377c29a1946707966b87f178"
+                  },
+                  {
+                      "path":  "chronolith-lite/OTHER_LANGUAGES/README_fr.md",
+                      "bytes":  3174,
+                      "sha256":  "02e0894a7990ff358608bd6bd49341b11bd3ebb960966ba7cc143b5040a5fd5c"
+                  },
+                  {
+                      "path":  "chronolith-lite/OTHER_LANGUAGES/README_it.md",
+                      "bytes":  3174,
+                      "sha256":  "19ea5c3cdd306aaf0df536569d2f3be3b66cc9c423a4a7c0496625a36637efe6"
+                  },
+                  {
+                      "path":  "chronolith-lite/OTHER_LANGUAGES/README_ja.md",
+                      "bytes":  3701,
+                      "sha256":  "d00c563f5af41701b85f312ce58d2466a837ae17b5f5a2b4e286a03a7cc66d97"
+                  },
+                  {
+                      "path":  "chronolith-lite/OTHER_LANGUAGES/README_ko.md",
+                      "bytes":  3981,
+                      "sha256":  "1267f53f83239ae2c2955758aee1ac1628cdc255ab8cc7ca0bc0b9ea0410c921"
+                  },
+                  {
+                      "path":  "chronolith-lite/OTHER_LANGUAGES/README_pt.md",
+                      "bytes":  3174,
+                      "sha256":  "c80eb49fbaa5b416f878471a601516d15a2022699d85d1da6a958e5feef093e5"
+                  },
+                  {
+                      "path":  "chronolith-lite/OTHER_LANGUAGES/README_ru.md",
+                      "bytes":  4522,
+                      "sha256":  "7a0d3c64ec27d2fd08d4dfea97c2dbfee7a3912795f47fbbf6e72747bd87b9a3"
+                  },
+                  {
+                      "path":  "chronolith-lite/OTHER_LANGUAGES/README_zh.md",
+                      "bytes":  2965,
+                      "sha256":  "8433eb24509d1e350438b97302b0212a6bc27eb1fb002ecbd137e119b24de6f6"
+                  },
+                  {
+                      "path":  "chronolith-lite/PROJECT_CONTEXT.md",
+                      "bytes":  1565,
+                      "sha256":  "b4689778ded9be30153ba430353c414de0fbe3939ba9e1e00e27cd321814e552"
+                  },
+                  {
+                      "path":  "chronolith-lite/pyproject.toml",
+                      "bytes":  821,
+                      "sha256":  "f5f602865b41d74c0f65b1018cbb18d439d3a3eb8db1abbd528e14da851fdf22"
+                  },
+                  {
+                      "path":  "chronolith-lite/pytest.ini",
+                      "bytes":  128,
+                      "sha256":  "b8da604a1ca9f77dd82918f5a27eda538efb1481c2c14770cc287f5974c1d1ed"
+                  },
+                  {
+                      "path":  "chronolith-lite/README.md",
+                      "bytes":  1600,
+                      "sha256":  "01f7a4458298d697218c09d29995e1fe2868daa7c51085f615b5f7585da6970a"
+                  },
+                  {
+                      "path":  "chronolith-lite/run_chronolith_lite.py",
+                      "bytes":  570,
+                      "sha256":  "39e16f22c8ff519fa539982ae27cf9fd11ffa9dcebbac135e36f57c380575141"
+                  },
+                  {
+                      "path":  "chronolith-lite/STATE.json",
+                      "bytes":  51,
+                      "sha256":  "41909ccdecab93267163e5e5046cc7e8f5a8f009433b31806a8b9e82164c4950"
+                  },
+                  {
+                      "path":  "chronolith-lite/tests/test_lite_logic.py",
+                      "bytes":  4710,
+                      "sha256":  "3183595e702b5742b2fc81a874058e4243d16970699ba6c94d7860be8df9d038"
+                  },
+                  {
+                      "path":  "chronolith-omega/.gitignore",
+                      "bytes":  140,
+                      "sha256":  "39c2ddb90f1670c434d77ca148e63412ee4157debf9bf4bebea78f8c10ba6ccd"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/__init__.py",
+                      "bytes":  36,
+                      "sha256":  "c61a8f59d9f6a9e5de994b20e2efe6791a372f8767526d0f7d75bb0a70a7d472"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/archive_manager.py",
+                      "bytes":  2960,
+                      "sha256":  "da96735cd03396547a490c3b87b29f57055247b07ca4522cd8a2858ae2e7521d"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/automation_common.py",
+                      "bytes":  10171,
+                      "sha256":  "b9a8e346c757e4ff849e1ebdd38272abe6019265bb792f31aa8e233f9ba2db77"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/bootstrap_context.py",
+                      "bytes":  1523,
+                      "sha256":  "ce10746cdad53285077881a8052882e8715bd322f6b033d0266d4350bae97bae"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/bootstrap_project.py",
+                      "bytes":  7624,
+                      "sha256":  "e3302d506c332df6ea84c9691668a74db4e511bf9b68ab31da8d749f11dfa798"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/cognitive_map.py",
+                      "bytes":  4599,
+                      "sha256":  "d2a5bf03903abd8afd650384556e6a10beeb17833252a0394e4649962566e125"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/context_loader.py",
+                      "bytes":  6385,
+                      "sha256":  "b84c83a9d3379bca6beeaef7256d9e083cae249e671551ae6b87ea27974dd754"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/continuity_status.py",
+                      "bytes":  2938,
+                      "sha256":  "114288bf238ca485136786085d513b0be8532030e0f50c3edcd54ba642a4cee5"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/continuity_suggest.py",
+                      "bytes":  2242,
+                      "sha256":  "a34c97ec37cb1f30a5cdda90a17a76aeb06dd18e3faacb05373294e96f775896"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/decision_engine.py",
+                      "bytes":  5917,
+                      "sha256":  "adddc1634299538d6993e43e4265e97cce51c9b85696240abbb3c9fc2a255a30"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/discover_project.py",
+                      "bytes":  4073,
+                      "sha256":  "0c70dee03525c3fc5d65d71b03cb6b231cd255998898c964658ada3f491f3c61"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/doc_parity_check.py",
+                      "bytes":  4341,
+                      "sha256":  "0caa8fc77c7cc4bd7e8f61ab99bdc5f85b57a39db5cc3cba3dcf99e685d6cda9"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/encoding_sanitizer.py",
+                      "bytes":  5529,
+                      "sha256":  "0ad2075fb3d7d76b2e9229862adb90a3d0c832100bab01cac342fbd3c0bf7cb6"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/heal_parity.py",
+                      "bytes":  2933,
+                      "sha256":  "55e40eaeda63ea5dd1963a868f22211eba8bd71dae2238e6d7405019805ad580"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/hook_utils.py",
+                      "bytes":  2871,
+                      "sha256":  "fede51e5e91f190b90cf93c8202864bd7fdc9edeea77fa653fdd3fe8e925ce5e"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/memory_graph_lite.py",
+                      "bytes":  2542,
+                      "sha256":  "94512bc56e126abf0f73f76240720464f7a18ac4889c6275e2bae67eaa6a5dcf"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/notify_webhook.py",
+                      "bytes":  5622,
+                      "sha256":  "deec1be593cd1718f81a8bb7e409798f129582438602c70dff25de5f3e9fec93"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/omega_engine.py",
+                      "bytes":  5831,
+                      "sha256":  "9b014e1a0063e4d949b6ec333b246bf0e2346b1ce1045d10944fb1c15516588a"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/README.md",
+                      "bytes":  878,
+                      "sha256":  "ce894cd18b4effdc18c4243753acb7d1a0a5866a78e44c9ffed65eed39b82feb"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/run_chronolith_cycle.py",
+                      "bytes":  500,
+                      "sha256":  "e0c4d69c791569db660d1a5d63c84383f2aa1b067436f43a76db37f54d49049f"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/run_chronolith_omega.py",
+                      "bytes":  8941,
+                      "sha256":  "e2e1873dd267b19f1bdfd5902330f4af46b33c2533be14a543fbe781e21b2728"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/secret_detector.py",
+                      "bytes":  1495,
+                      "sha256":  "7448f7e314d2049369d23b085f87b2aa1f0d6e70a6517c20caf6a0adecc22e26"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/summarize_memory.py",
+                      "bytes":  1740,
+                      "sha256":  "dc890018c6bdedbebca51e0c56475cfb67dee35e7c42cf1356877e9adf65d8b0"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/sync_external_dev_context.py",
+                      "bytes":  8995,
+                      "sha256":  "ee19e2af5dd1871ee5ef4b3568e6f3ecdc9cf5365332b12c41f8e227d23287a2"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/sync_translations.py",
+                      "bytes":  4131,
+                      "sha256":  "098d38f66dc66878b97efbb2729036a4379c5800f5e097ee50e8b49b16de4801"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/system_membership_check.py",
+                      "bytes":  2433,
+                      "sha256":  "ae5378fae265b5575b456df4bb718c145993c7434092ed2cfa1e76e3f8b5bdcc"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/update_memory.py",
+                      "bytes":  3234,
+                      "sha256":  "ffdba92766e5a1e2d93e75f12b6c59d6a73d3d47ab469aaa059dd61f88279dfc"
+                  },
+                  {
+                      "path":  "chronolith-omega/chronolith_omega/chronolith/vector_store_lite.py",
+                      "bytes":  2517,
+                      "sha256":  "a976254bd819135d0a5dea5b8478fd092753a59e35a8079e7fb09e4057617265"
+                  },
+                  {
+                      "path":  "chronolith-omega/LICENSE",
+                      "bytes":  1092,
+                      "sha256":  "363cc05958477e0116d91c0d8d8f7ac02077edb313c43e14a42370d738f7a829"
+                  },
+                  {
+                      "path":  "chronolith-omega/OTHER_LANGUAGES/README_ar.md",
+                      "bytes":  3856,
+                      "sha256":  "e2f00104229d35a774585c8cfc02765ad13845faa63889922b34ca27defd0368"
+                  },
+                  {
+                      "path":  "chronolith-omega/OTHER_LANGUAGES/README_de.md",
+                      "bytes":  3174,
+                      "sha256":  "71acce046370c93b706a24b2861fc81a7704508e84fc9b1444d45943ce0397f1"
+                  },
+                  {
+                      "path":  "chronolith-omega/OTHER_LANGUAGES/README_en.md",
+                      "bytes":  3174,
+                      "sha256":  "72cb3adeaaefefa22210bd789e0f196ea7c34b1694464ecd0428f175233c1fd2"
+                  },
+                  {
+                      "path":  "chronolith-omega/OTHER_LANGUAGES/README_es.md",
+                      "bytes":  3310,
+                      "sha256":  "0f704b17ea20626fce1084cbe616b866f2aaa9c6aa7c90a5fc66b1916a27a6f4"
+                  },
+                  {
+                      "path":  "chronolith-omega/OTHER_LANGUAGES/README_fr.md",
+                      "bytes":  3174,
+                      "sha256":  "a00d82ce6960aeb4cfae5f4d5a667d9123444885bb410959303b894b6016cbd4"
+                  },
+                  {
+                      "path":  "chronolith-omega/OTHER_LANGUAGES/README_it.md",
+                      "bytes":  3174,
+                      "sha256":  "acec284dbee25244a0594670da2a95967c212cc8c7c14d4779299a3e5c1b5549"
+                  },
+                  {
+                      "path":  "chronolith-omega/OTHER_LANGUAGES/README_ja.md",
+                      "bytes":  3701,
+                      "sha256":  "96ebd0d789a2de0f6f236cbbaa87485b9347d8b58e5fbb1a38d6101719d7aedb"
+                  },
+                  {
+                      "path":  "chronolith-omega/OTHER_LANGUAGES/README_ko.md",
+                      "bytes":  3335,
+                      "sha256":  "2750770315852d644061633781b611580c767f97519d5dd1a3b9ec1eb84d1a15"
+                  },
+                  {
+                      "path":  "chronolith-omega/OTHER_LANGUAGES/README_pt.md",
+                      "bytes":  3174,
+                      "sha256":  "1ae7541f356f44f1ac96112c77695e88c3521edc155fcc6e5419671d5e71f107"
+                  },
+                  {
+                      "path":  "chronolith-omega/OTHER_LANGUAGES/README_ru.md",
+                      "bytes":  4522,
+                      "sha256":  "577e88376ee8304fcd301fbe9eb1bc6a8a80e383c982576e0dbf2f5077bb869a"
+                  },
+                  {
+                      "path":  "chronolith-omega/OTHER_LANGUAGES/README_zh.md",
+                      "bytes":  2965,
+                      "sha256":  "73d483fc4b609c2f7df7cf8c9ab0d9124c0d7101f1f5fcfe956531dd8a5b7864"
+                  },
+                  {
+                      "path":  "chronolith-omega/PROJECT_CONTEXT.md",
+                      "bytes":  1741,
+                      "sha256":  "e0b6a55841eaf70611e4344b07b72092a33a1b3b588c5eb67cc233c87c063530"
+                  },
+                  {
+                      "path":  "chronolith-omega/pyproject.toml",
+                      "bytes":  903,
+                      "sha256":  "5c906ac5152725f9ce2ab639d2b15a33edc045d1e90c51212e9013e1ac2ecafd"
+                  },
+                  {
+                      "path":  "chronolith-omega/pytest.ini",
+                      "bytes":  128,
+                      "sha256":  "b8da604a1ca9f77dd82918f5a27eda538efb1481c2c14770cc287f5974c1d1ed"
+                  },
+                  {
+                      "path":  "chronolith-omega/README.md",
+                      "bytes":  1637,
+                      "sha256":  "91e55e81b729c2e121734f6cc8172b88ef0001a792cd1efe72640cce122d3def"
+                  },
+                  {
+                      "path":  "chronolith-omega/run_chronolith_omega.py",
+                      "bytes":  588,
+                      "sha256":  "d3b5a35691af154f77157b96da02460e762ccddb443cf1d77af9dcc405a02d22"
+                  },
+                  {
+                      "path":  "chronolith-omega/tests/test_omega_logic.py",
+                      "bytes":  4442,
+                      "sha256":  "3edf17902482259c5369cca1930dbde87e5646d711d8262971d5214ef1d8d610"
+                  },
+                  {
+                      "path":  "chronolith-omega/tests/test_parity_logic.py",
+                      "bytes":  1141,
+                      "sha256":  "b26c673d134b2f6f4de66afc9aeb317b8ad25f88e794d70ae891918fd0669258"
+                  },
+                  {
+                      "path":  "chronolith-pro/.github/workflows/continuity.yml",
+                      "bytes":  1522,
+                      "sha256":  "b952be9176a672885ebfa0eaf402580b68a081ca130f4ff8f22feb49d2072814"
+                  },
+                  {
+                      "path":  "chronolith-pro/.gitignore",
+                      "bytes":  140,
+                      "sha256":  "39c2ddb90f1670c434d77ca148e63412ee4157debf9bf4bebea78f8c10ba6ccd"
+                  },
+                  {
+                      "path":  "chronolith-pro/AGENT_START.md",
+                      "bytes":  2958,
+                      "sha256":  "929583daacc736b53a4c2d7fe684c3b8e5f60047734ffd50d85fe726f1448917"
+                  },
+                  {
+                      "path":  "chronolith-pro/assets/banner.png",
+                      "bytes":  306747,
+                      "sha256":  "cfb0beea7f728175de45fd4de846e71c038fc43d5980c10ae34ad898c1f8f05a"
+                  },
+                  {
+                      "path":  "chronolith-pro/CHANGELOG.md",
+                      "bytes":  6711,
+                      "sha256":  "8a9c5ed3fc165684bb86c7b3f44b7bfd22ec6a75211ec9479d7d775ad7cea616"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/__init__.py",
+                      "bytes":  36,
+                      "sha256":  "c61a8f59d9f6a9e5de994b20e2efe6791a372f8767526d0f7d75bb0a70a7d472"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/anchor.py",
+                      "bytes":  10933,
+                      "sha256":  "c8180728de2d578932ca04ec1455d83b3b307b20c6ca7821d9819b375f2eacda"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/archive_manager.py",
+                      "bytes":  2960,
+                      "sha256":  "da96735cd03396547a490c3b87b29f57055247b07ca4522cd8a2858ae2e7521d"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/automation_common.py",
+                      "bytes":  27692,
+                      "sha256":  "919a5136d36615c37f5a1e9d18ea05ac823b1139559a54d0b85e4311f421c16e"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/bootstrap_context.py",
+                      "bytes":  1523,
+                      "sha256":  "ce10746cdad53285077881a8052882e8715bd322f6b033d0266d4350bae97bae"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/bootstrap_project.py",
+                      "bytes":  7624,
+                      "sha256":  "e3302d506c332df6ea84c9691668a74db4e511bf9b68ab31da8d749f11dfa798"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/context_loader.py",
+                      "bytes":  6385,
+                      "sha256":  "b84c83a9d3379bca6beeaef7256d9e083cae249e671551ae6b87ea27974dd754"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/continuity_status.py",
+                      "bytes":  2938,
+                      "sha256":  "114288bf238ca485136786085d513b0be8532030e0f50c3edcd54ba642a4cee5"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/continuity_suggest.py",
+                      "bytes":  2242,
+                      "sha256":  "a34c97ec37cb1f30a5cdda90a17a76aeb06dd18e3faacb05373294e96f775896"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/decision_engine.py",
+                      "bytes":  5948,
+                      "sha256":  "106219a7ef6e1a3684b241facb89d3e7d51c079c74651744d989f7ffb1a03e03"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/discover_project.py",
+                      "bytes":  4073,
+                      "sha256":  "0c70dee03525c3fc5d65d71b03cb6b231cd255998898c964658ada3f491f3c61"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/doc_parity_check.py",
+                      "bytes":  4341,
+                      "sha256":  "0caa8fc77c7cc4bd7e8f61ab99bdc5f85b57a39db5cc3cba3dcf99e685d6cda9"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/encoding_sanitizer.py",
+                      "bytes":  5529,
+                      "sha256":  "0ad2075fb3d7d76b2e9229862adb90a3d0c832100bab01cac342fbd3c0bf7cb6"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/ene_optimizer.py",
+                      "bytes":  2682,
+                      "sha256":  "7faf4ed09dd8793eeb8c7808710b4184b87121c535f88559220afba885f1dd46"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/heal_parity.py",
+                      "bytes":  2933,
+                      "sha256":  "55e40eaeda63ea5dd1963a868f22211eba8bd71dae2238e6d7405019805ad580"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/hook_utils.py",
+                      "bytes":  2580,
+                      "sha256":  "7ed536bc341e2cd91e8d6678fae6ff7e1c28da1026ce8e6e4ffd2ca823dfe5ac"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/memory_graph_lite.py",
+                      "bytes":  2542,
+                      "sha256":  "94512bc56e126abf0f73f76240720464f7a18ac4889c6275e2bae67eaa6a5dcf"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/notify_webhook.py",
+                      "bytes":  5622,
+                      "sha256":  "deec1be593cd1718f81a8bb7e409798f129582438602c70dff25de5f3e9fec93"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/README.md",
+                      "bytes":  878,
+                      "sha256":  "ce894cd18b4effdc18c4243753acb7d1a0a5866a78e44c9ffed65eed39b82feb"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/run_chronolith_cycle.py",
+                      "bytes":  54628,
+                      "sha256":  "b4a8eb912f1949a8e2325aa87c49ea87ab8bab8b2c0f0f35175f2d79ae709aed"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/secret_detector.py",
+                      "bytes":  6938,
+                      "sha256":  "aee5a486a90106370a3507bc4bcf7c2c0bc34ddea9f7fa8e250258186e99fead"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/sovereign_identity.py",
+                      "bytes":  5616,
+                      "sha256":  "a1986ecceac25b76b77feb16d21584550853c52923f91d93f2e85406b8293e38"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/sovereign_vault.py",
+                      "bytes":  12308,
+                      "sha256":  "5a5f538bc1ddada36dbe19285e734e321a6bb8f11fb997b59fdf5476f9d1deba"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/summarize_memory.py",
+                      "bytes":  1740,
+                      "sha256":  "dc890018c6bdedbebca51e0c56475cfb67dee35e7c42cf1356877e9adf65d8b0"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/sync_external_dev_context.py",
+                      "bytes":  8995,
+                      "sha256":  "ee19e2af5dd1871ee5ef4b3568e6f3ecdc9cf5365332b12c41f8e227d23287a2"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/sync_translations.py",
+                      "bytes":  9614,
+                      "sha256":  "ba762c8e23dcb45f9419ffa38d7347eae86eb64c9d4277fed4c56ad42e0d1536"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/system_membership_check.py",
+                      "bytes":  2226,
+                      "sha256":  "f0729c64727f092abd922f9ab5f42c20639c161f70a2bd1847b01f86027d5e20"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/tokenator.py",
+                      "bytes":  13862,
+                      "sha256":  "c7b28d848964897d66f07df656e804f173d9a5ccfd41f6115c01695f2e73f9ab"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/translations_ene.json",
+                      "bytes":  16822,
+                      "sha256":  "502cddbb12d78e771fc780150bddc1ba23cf42fbaab37dc69960a5feb5679282"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/update_memory.py",
+                      "bytes":  3234,
+                      "sha256":  "ffdba92766e5a1e2d93e75f12b6c59d6a73d3d47ab469aaa059dd61f88279dfc"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/vector_store_lite.py",
+                      "bytes":  2517,
+                      "sha256":  "a976254bd819135d0a5dea5b8478fd092753a59e35a8079e7fb09e4057617265"
+                  },
+                  {
+                      "path":  "chronolith-pro/chronolith_pro/chronolith/zip_bridge.py",
+                      "bytes":  3473,
+                      "sha256":  "5f99e5ec3e41e064667cdd8115eaf538cead7bde53c68f61027741dcd755ff0f"
+                  },
+                  {
+                      "path":  "chronolith-pro/continuity_legacy.json",
+                      "bytes":  573,
+                      "sha256":  "972a2c011e7524f385bb4326e803734ba6b40df78de76138e5c61bb89657dfb6"
+                  },
+                  {
+                      "path":  "chronolith-pro/CONTRIBUTING.md",
+                      "bytes":  2343,
+                      "sha256":  "8e3cae3f1704e814184cc384caaf948d472e6480b0f8f202e8db44e4d15ddef5"
+                  },
+                  {
+                      "path":  "chronolith-pro/examples/README.md",
+                      "bytes":  529,
+                      "sha256":  "aa7117be92b3234d5eb77430b2ad54d28a5577cee203f0711649d1a8d95ea0ba"
+                  },
+                  {
+                      "path":  "chronolith-pro/examples/sample_project/README.md",
+                      "bytes":  1050,
+                      "sha256":  "44cbf8559631a13b3f210471141e80b18b55375c5d799c35b25a7c488b08787f"
+                  },
+                  {
+                      "path":  "chronolith-pro/examples/sample_project/STATE.json",
+                      "bytes":  46,
+                      "sha256":  "0b561da6e083c334de17f80a26200d81a12c2bdee5ceb707df5ab1f094e88de3"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/applypatch-msg.sample",
+                      "bytes":  478,
+                      "sha256":  "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/commit-msg.sample",
+                      "bytes":  896,
+                      "sha256":  "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/fsmonitor-watchman.sample",
+                      "bytes":  4726,
+                      "sha256":  "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/post-update.sample",
+                      "bytes":  189,
+                      "sha256":  "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/pre-applypatch.sample",
+                      "bytes":  424,
+                      "sha256":  "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/pre-commit",
+                      "bytes":  577,
+                      "sha256":  "26bd90acbcecc934a4e3edb6aaff242ea49ba1e1a0c2a15241f84de16697a20d"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/pre-commit.sample",
+                      "bytes":  1649,
+                      "sha256":  "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/pre-merge-commit.sample",
+                      "bytes":  416,
+                      "sha256":  "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/prepare-commit-msg.sample",
+                      "bytes":  1492,
+                      "sha256":  "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/pre-push",
+                      "bytes":  770,
+                      "sha256":  "dca62df02ba5bccd5e86f75fe719ce23dc0b7ec9cba2e0e2eac873d2eae70fd0"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/pre-push.sample",
+                      "bytes":  1374,
+                      "sha256":  "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/pre-rebase.sample",
+                      "bytes":  4898,
+                      "sha256":  "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/pre-receive.sample",
+                      "bytes":  544,
+                      "sha256":  "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/push-to-checkout.sample",
+                      "bytes":  2783,
+                      "sha256":  "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/sendemail-validate.sample",
+                      "bytes":  2308,
+                      "sha256":  "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
+                  },
+                  {
+                      "path":  "chronolith-pro/hooks/update.sample",
+                      "bytes":  3650,
+                      "sha256":  "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+                  },
+                  {
+                      "path":  "chronolith-pro/LICENSE",
+                      "bytes":  1092,
+                      "sha256":  "363cc05958477e0116d91c0d8d8f7ac02077edb313c43e14a42370d738f7a829"
+                  },
+                  {
+                      "path":  "chronolith-pro/MAINTAINERS.md",
+                      "bytes":  1591,
+                      "sha256":  "2a494d73d5f8004d415ddcbeb7bc0e90a0b15b8f817a5baa12a6975cb949619f"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/de/README.md",
+                      "bytes":  2996,
+                      "sha256":  "529044f0dfc6c0dc33a68493c7358a8f68de35e8ee81f72e8326a6007294a4ee"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/de/TROUBLESHOOTING.md",
+                      "bytes":  3658,
+                      "sha256":  "825cf4da5679cb019037bfc65ddf0025f6128b2a3daf0cfba2a163b9239440d0"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/de/USE_CASES.md",
+                      "bytes":  2795,
+                      "sha256":  "90dd9ed08d0a4b7b1c1ea6736da55356eb338f7686430588ce10a5f92383cec1"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/en/README.md",
+                      "bytes":  2567,
+                      "sha256":  "b800cbbe15db5b6f72742dcfb866b1a7b632385d8dfb2704b1ada661ec528075"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/en/TROUBLESHOOTING.md",
+                      "bytes":  3026,
+                      "sha256":  "c5fec85db87d7b00a8728910530e24a937b146c00a62a8975fa98696f41d23b1"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/en/USE_CASES.md",
+                      "bytes":  2494,
+                      "sha256":  "dacd6cf311d8dcde09219bd8c163fedef9d5366aff71c00c14426cd8b647da4f"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/es/README.md",
+                      "bytes":  2326,
+                      "sha256":  "e604bdb2fb239c70d6546e407928b3dc1acde93af28e4c29bad695aecfd65288"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/es/TROUBLESHOOTING.md",
+                      "bytes":  3259,
+                      "sha256":  "1692c9fa458336d04942a59fc73954135d9627231707aa5cae2e0b37104ebcdd"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/es/USE_CASES.md",
+                      "bytes":  2676,
+                      "sha256":  "ef415bbb41d80608e036fd41637ab07b785f5a457d286abb20ec3b4ed6b48434"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/fr/README.md",
+                      "bytes":  2993,
+                      "sha256":  "ed186588e16fe3d8936e656b4a3d3e27acd502ccd9862460b80c18659ba28e43"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/fr/TROUBLESHOOTING.md",
+                      "bytes":  3559,
+                      "sha256":  "ffb75648acdf354a5b0bf9dfcff3445736fa9a715585e645dbf42e56ac72ee46"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/fr/USE_CASES.md",
+                      "bytes":  2939,
+                      "sha256":  "25c280a94602c28ac67a7c788d9fd15bd5ba6e09d83aadf37390ee2430cd9528"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/it/README.md",
+                      "bytes":  2931,
+                      "sha256":  "2a7a8722380a979f78a354aa1ef008fbbb3661b3d09777d61c34e716b2dfbd3d"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/it/TROUBLESHOOTING.md",
+                      "bytes":  3393,
+                      "sha256":  "10dc87332a21cbba49da3490cf33ea104ef5a9101b4a14fd4002116def6f640a"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/it/USE_CASES.md",
+                      "bytes":  2679,
+                      "sha256":  "00932c7547b943d5ba7591b88b58616a849cbf973c39237182eee1fd85bfa9f3"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/ja/README.md",
+                      "bytes":  5419,
+                      "sha256":  "9346cf41d3df2beac3c5955a5bb1eedb53c660f3f54aade409058902a6805298"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/ja/TROUBLESHOOTING.md",
+                      "bytes":  4124,
+                      "sha256":  "76abac0bf98543eb09e5b01df0eed1ebac2f53f12d35d9874b4ef8a81f2e48f3"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/ja/USE_CASES.md",
+                      "bytes":  3431,
+                      "sha256":  "e473a333e2366ae6f1fc6715c854ed3b3a74c3def2626c100602eed54b2893c3"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/nl/README.md",
+                      "bytes":  2870,
+                      "sha256":  "3013a8696ff231fe284aa6e573e0ec9f0fda5b2581a738c7523c519936b05bd1"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/nl/TROUBLESHOOTING.md",
+                      "bytes":  3519,
+                      "sha256":  "fa4bcbba35c84af335e9dfa11a7e5228569e9d9bc542fa7c2c6c0fc6037665e0"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/nl/USE_CASES.md",
+                      "bytes":  2732,
+                      "sha256":  "8312d25e74efaf0f85f3eb8d5d35fb5929718ec76e29537f281a7629a5d11b57"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/README_ar.md",
+                      "bytes":  5567,
+                      "sha256":  "cdf8780c766d8152ada494f635446230e49b20ad00e5f1d5be4f2d531d2fae49"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/README_de.md",
+                      "bytes":  3174,
+                      "sha256":  "18db7ff5dd21615c5bb6c3eb785606581dc019c93fefca53e78a8fa05adcacd8"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/README_en.md",
+                      "bytes":  3174,
+                      "sha256":  "3d94642f78f33065bdb15e54e912754e58528bb920a147aeb308814137e36429"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/README_es.md",
+                      "bytes":  3310,
+                      "sha256":  "ab1b3132513d40b8434a755878335c857d1e89242f3f0e56400395bff0310f61"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/README_fr.md",
+                      "bytes":  3174,
+                      "sha256":  "76449497552a9d211e3c1e241bd9d15756e63d7655712235a675bab5094d1ec0"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/README_it.md",
+                      "bytes":  3174,
+                      "sha256":  "99d623fe62cf5650f3eb178113065b1ceb87d8b164e5e71e5ad6501076bb9525"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/README_ja.md",
+                      "bytes":  3701,
+                      "sha256":  "495d9e557f3f412c1aa3bf7c4765be7f447cc97a838fd7b7a9a70bedab7ef8bb"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/README_ko.md",
+                      "bytes":  4833,
+                      "sha256":  "0337d5d11de912612f02702294e935e610038c2e0ff49068c91500e941084123"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/README_pt.md",
+                      "bytes":  3174,
+                      "sha256":  "d84f383b202ea8020ccbb8f8993fb34cc9562156bd209ee2457f79e55018d9e7"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/README_ru.md",
+                      "bytes":  4522,
+                      "sha256":  "a3c959354cdd13b6c8b4fbf318848de233fa95430321ad8678a36dbde6e6477d"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/README_zh.md",
+                      "bytes":  2965,
+                      "sha256":  "57d29ad05c599c13573e2c7202ddb333f4902278292350f64a0ff4e6d6d0a817"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/ru/README.md",
+                      "bytes":  4269,
+                      "sha256":  "200df7bd46c21d4103c0cbf1edaa03f13f14eb4bfef2086f8a657688ef63566f"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/ru/TROUBLESHOOTING.md",
+                      "bytes":  5022,
+                      "sha256":  "67c54eb4d63c8db8327ac0fee0730bf6c5eb42806b813b5e6220b40fdf7e4b28"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/ru/USE_CASES.md",
+                      "bytes":  4221,
+                      "sha256":  "7dfcd77f92212568a5b30d91e2ee6151f3d8ec3ef6d4054ddf7c773f876a1584"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/zh/README.md",
+                      "bytes":  2556,
+                      "sha256":  "0972dcaca7705a1f192181e84256bd7ddb2e85114d12506e0e4335a4b3f3141d"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/zh/TROUBLESHOOTING.md",
+                      "bytes":  3081,
+                      "sha256":  "d3a52305a5a7535d1e9fc40f2842e78f9522e8490bfdca915e057e272b7eb4de"
+                  },
+                  {
+                      "path":  "chronolith-pro/OTHER_LANGUAGES/zh/USE_CASES.md",
+                      "bytes":  2406,
+                      "sha256":  "e4ed02dc1324a448fdac436cd99f9c0223c859d50d0b0de975be2a67d2f80d88"
+                  },
+                  {
+                      "path":  "chronolith-pro/PROJECT_CONTEXT.md",
+                      "bytes":  1700,
+                      "sha256":  "af73f2105212ab46342a5713b6a35529507c72046f7e0e37b6955d2b389d4287"
+                  },
+                  {
+                      "path":  "chronolith-pro/pyproject.toml",
+                      "bytes":  1327,
+                      "sha256":  "8a319b14aa8c40f2338740611da2d31657c25b668da79ae4462d53a80ed134b9"
+                  },
+                  {
+                      "path":  "chronolith-pro/pytest.ini",
+                      "bytes":  128,
+                      "sha256":  "b8da604a1ca9f77dd82918f5a27eda538efb1481c2c14770cc287f5974c1d1ed"
+                  },
+                  {
+                      "path":  "chronolith-pro/README.md",
+                      "bytes":  1605,
+                      "sha256":  "50571dedb6f1f7d685a3fcc8cc6dbaf39d788a4285901f6f5852e654a5761335"
+                  },
+                  {
+                      "path":  "chronolith-pro/ROADMAP.md",
+                      "bytes":  414,
+                      "sha256":  "12e0acf8fbe80ce7fd7e3287fdee0cc7c531048e121ab8c7b41fe8119215e791"
+                  },
+                  {
+                      "path":  "chronolith-pro/run_chronolith_pro.py",
+                      "bytes":  580,
+                      "sha256":  "2028556e09b91ae042c120c5660ce14a5b748e452b00fd60a96557e49d01da00"
+                  },
+                  {
+                      "path":  "chronolith-pro/SECURITY.md",
+                      "bytes":  3477,
+                      "sha256":  "6baccceca7300a3355be505c595e897ab411156341d5b29eb2d95316a72df12f"
+                  },
+                  {
+                      "path":  "chronolith-pro/SOVEREIGN_SECURITY.md",
+                      "bytes":  6879,
+                      "sha256":  "9c23d1e952d127dfed9b19df77574e5fae99912200a793f276c309652b6556ef"
+                  },
+                  {
+                      "path":  "chronolith-pro/STATE.json",
+                      "bytes":  1321,
+                      "sha256":  "30e1f34cf2a19953b2570f0c38fc7ee8a95b1575d129d5783f65f3c28456f4eb"
+                  },
+                  {
+                      "path":  "chronolith-pro/tests/test_anchor.py",
+                      "bytes":  7073,
+                      "sha256":  "f39e673941b1f3755caa35026c8d75a95a7af9d90791ff04bfa637e45cff010d"
+                  },
+                  {
+                      "path":  "chronolith-pro/tests/test_cli_surface.py",
+                      "bytes":  4684,
+                      "sha256":  "0fe331b3745b20ff87cf2ae055c42e5cadc43e142335bfd04d6974921a475cc2"
+                  },
+                  {
+                      "path":  "chronolith-pro/tests/test_integrity.py",
+                      "bytes":  10537,
+                      "sha256":  "d21402f182b3910b39ef84f111f76cfdac42f9e26ce1ce53177483cc0926c62e"
+                  },
+                  {
+                      "path":  "chronolith-pro/tests/test_logic.py",
+                      "bytes":  3881,
+                      "sha256":  "0ae649d3bf9a5d7b33d50342cf0d90c6290d2f8d4b0d2b57bcb2d10ef0fbae5d"
+                  },
+                  {
+                      "path":  "chronolith-pro/tests/test_parity_logic.py",
+                      "bytes":  1482,
+                      "sha256":  "1c156237cfb0b8719b90195416c2c0bcf16f8e7cd8beba9959abe371876cc1d0"
+                  },
+                  {
+                      "path":  "chronolith-pro/tests/test_secret_detector.py",
+                      "bytes":  5386,
+                      "sha256":  "2715c0b8fbceb6ef073d07281d551fe17a6e11186524b5f8c1451fc3f991054b"
+                  },
+                  {
+                      "path":  "chronolith-pro/tests/test_vault.py",
+                      "bytes":  8406,
+                      "sha256":  "a07cb2712617e438c559a30a62434bb03812c1f04bd36837b7221de9dbc2bfde"
+                  },
+                  {
+                      "path":  "chronolith-pro/tests/test_verify.py",
+                      "bytes":  11944,
+                      "sha256":  "3ecf8b7acb6a8fe90ecc90aaf4c57aedfbe5967ebed64ec959133d16dcf34829"
+                  },
+                  {
+                      "path":  "chronolith-pro/TROUBLESHOOTING.md",
+                      "bytes":  3026,
+                      "sha256":  "c5fec85db87d7b00a8728910530e24a937b146c00a62a8975fa98696f41d23b1"
+                  },
+                  {
+                      "path":  "chronolith-pro/USE_CASES.md",
+                      "bytes":  2494,
+                      "sha256":  "dacd6cf311d8dcde09219bd8c163fedef9d5366aff71c00c14426cd8b647da4f"
+                  },
+                  {
+                      "path":  "chronolith-pro/VERSION",
+                      "bytes":  6,
+                      "sha256":  "33bdaf9e2d6bcbde2e4e613e865e403f8fe21fc621078d34c30b0bdc7f68d903"
+                  },
+                  {
+                      "path":  "conftest.py",
+                      "bytes":  1067,
+                      "sha256":  "ed82348045fbdc6af770734b8a1d2d230d38a0a8c2faa94e2cced425975df5f2"
+                  },
+                  {
+                      "path":  "CONTRIBUTING.md",
+                      "bytes":  1712,
+                      "sha256":  "db3658b985d1e2cd78ce441253d80e51c648abc8591804052f5599e9b0c22de8"
+                  },
+                  {
+                      "path":  "CONTRIBUTORS.md",
+                      "bytes":  445,
+                      "sha256":  "0330d5c8623e0f62c06a3af92997026d89b931a745c7bfd6cf79d2d80d02ceec"
+                  },
+                  {
+                      "path":  "docs/archive/demo_portal.zip",
+                      "bytes":  760,
+                      "sha256":  "760bc361d6a089f90dcaeee59059ce33108f76de04172e02562f817aa578970a"
+                  },
+                  {
+                      "path":  "docs/archive/Ethernium_Portal_Outside.json",
+                      "bytes":  479,
+                      "sha256":  "09258369cd1086750bac652a2ea76ae75e72f15105cca4cb3b045e6cbea5a09c"
+                  },
+                  {
+                      "path":  "docs/archive/README.md",
+                      "bytes":  335,
+                      "sha256":  "e6be7018414eaea73abd616bb6107831408c30d2a3593c960bf74d9105e07fe7"
+                  },
+                  {
+                      "path":  "docs/CHANGE_CONTRACT_TEMPLATE.md",
+                      "bytes":  1268,
+                      "sha256":  "0c7412d978057e55d92740d0aa85b5d2f600ad627db9566239bef0d2987eb804"
+                  },
+                  {
+                      "path":  "docs/change-contracts/2026-06-18-docs-origin-balance-agentops.md",
+                      "bytes":  1478,
+                      "sha256":  "bcc877e60467d8eefc67bef58d58b61a2f24e62b8ce4cf1d3d32caa8851ceea9"
+                  },
+                  {
+                      "path":  "docs/change-contracts/2026-06-18-golden-baseline-refresh-contract.md",
+                      "bytes":  1208,
+                      "sha256":  "186edea7f8e1a3957b51ca2fe69aa8d9b3dd86496c6008c6fff828232fa4dc3a"
+                  },
+                  {
+                      "path":  "docs/change-contracts/2026-06-18-modernize-pyproject-license.md",
+                      "bytes":  1290,
+                      "sha256":  "b97081df61efd67edf4b43d79f648300d3289bfb3eb06f6a12a99a49ad83a2bb"
+                  },
+                  {
+                      "path":  "docs/change-contracts/2026-06-19-editor-agentops-integration.md",
+                      "bytes":  1672,
+                      "sha256":  "c6f1c371f94e077d7602637bcd1d55dbd1d7cc4859cdfa363cf40a3e7dcae385"
+                  },
+                  {
+                      "path":  "docs/change-contracts/2026-06-19-externalize-agentops-conekta.md",
+                      "bytes":  1993,
+                      "sha256":  "a4d5d2137d0f8361607dd1d81dcfd32d29261ceadb6c88131468e5bda523fd6b"
+                  },
+                  {
+                      "path":  "docs/change-contracts/2026-06-19-root-document-reorganization.md",
+                      "bytes":  1846,
+                      "sha256":  "10427f933a09a19a0dbb5b7b60a1952d481e0b4781e809aa1a25c43622ded41a"
+                  },
+                  {
+                      "path":  "docs/change-contracts/2026-06-20-synergic-frugality-principle.md",
+                      "bytes":  1596,
+                      "sha256":  "8e42babd9b6d12264891014740794e765145e728d316670544fbf0aeff7a82f3"
+                  },
+                  {
+                      "path":  "docs/change-contracts/2026-07-18-golden-baseline-post-rename.md",
+                      "bytes":  2590,
+                      "sha256":  "ff6238b49547a4991bd37e2ec085a9faab7cdb81990932268e96271cf744c497"
+                  },
+                  {
+                      "path":  "docs/change-contracts/2026-07-18-release-3-2-1.md",
+                      "bytes":  1985,
+                      "sha256":  "b8c4ea3f29ccd34f0ef0477919b0ead891232071adefb37679e169f5d1d06381"
+                  },
+                  {
+                      "path":  "docs/change-contracts/2026-07-19-honest-descriptions.md",
+                      "bytes":  1372,
+                      "sha256":  "fe17bfc88f6e5e833ea00939d7fc747bc8541c98f76e073b9ef75232fd028a6a"
+                  },
+                  {
+                      "path":  "docs/change-contracts/2026-07-19-release-3-2-2.md",
+                      "bytes":  1141,
+                      "sha256":  "1af5506aa2092e879b2c535de07e3a548d34e744239a09b52c09f822672c515f"
+                  },
+                  {
+                      "path":  "docs/change-contracts/README.md",
+                      "bytes":  451,
+                      "sha256":  "d0f072704c4c054c2ff2e81d5976499d1bb7abdbfc82c17a27a76f0c4eea8e63"
+                  },
+                  {
+                      "path":  "docs/CHRONOLITH_GOVERNANCE_KERNEL.md",
+                      "bytes":  8177,
+                      "sha256":  "ffdd45e1fa7df191bad3077331d3f401f61c42f6291c497165a5e74cf1073b06"
+                  },
+                  {
+                      "path":  "docs/CONEKTA_ADAPTER_CONTRACT.md",
+                      "bytes":  1156,
+                      "sha256":  "2215b651202f6bd4e6d618e81791fc6c44b6be1190851a830d3092c37a1b4f27"
+                  },
+                  {
+                      "path":  "docs/EDITOR_AGENT_INTEGRATION.md",
+                      "bytes":  2564,
+                      "sha256":  "7be491b6bb4cd4bb4a276b399d7c44cb5264c907b5f750a19a59ac067339ba4c"
+                  },
+                  {
+                      "path":  "docs/evidence/ANCHOR_3647dd737ee8.json",
+                      "bytes":  640,
+                      "sha256":  "96f4aa9267d7015eb1efe9ddc88b0b5628842c713508f49c2a0d3d4d93620447"
+                  },
+                  {
+                      "path":  "docs/evidence/ANCHOR_3647dd737ee8.json.ots",
+                      "bytes":  1236,
+                      "sha256":  "73456444851962d6216095084ea2d48e1606d9d83cada201b53a5efc37ba99dd"
+                  },
+                  {
+                      "path":  "docs/evidence/README.md",
+                      "bytes":  3521,
+                      "sha256":  "ba68d936e861b2e8ad27a08324208ef12114f286f0f31045b392bed5a74a0511"
+                  },
+                  {
+                      "path":  "docs/external/AGENTOPS.md",
+                      "bytes":  2918,
+                      "sha256":  "7d92cf8b41cc709259342f1f2853f1a013d7e1b7ce1072a231023c1567b8db22"
+                  },
+                  {
+                      "path":  "docs/external/CONEKTA.md",
+                      "bytes":  1111,
+                      "sha256":  "1fae5f1821596d804f2152f2ccd99154a5e7a04c978a1df43fe7f5ed141d5986"
+                  },
+                  {
+                      "path":  "docs/external/README.md",
+                      "bytes":  994,
+                      "sha256":  "6490821bc69bc0ba34d04a128aff8bde9792aa213721db4b9e4fa3dae8bebcd1"
+                  },
+                  {
+                      "path":  "docs/external/ROBIN_HOOD_CAPACITY_BROKER.md",
+                      "bytes":  3486,
+                      "sha256":  "4168850b51b98bf0cb784048a4d2e37003b852092387d67f3e51888461e05ec8"
+                  },
+                  {
+                      "path":  "docs/ideas/README.md",
+                      "bytes":  565,
+                      "sha256":  "f758f5621bf70ed215c159b8a20b30d22ddfeffd332727b63251d9c0a624db84"
+                  },
+                  {
+                      "path":  "docs/process/README.md",
+                      "bytes":  588,
+                      "sha256":  "ea08bd83d3f514c46e37fc533482e49a15e5dc614b8f2ed6c5c0f3bdcce7b1dc"
+                  },
+                  {
+                      "path":  "docs/process/RELEASE_STAGING_PLAN.md",
+                      "bytes":  2900,
+                      "sha256":  "bf374058c5f564847155b4781a553ce2f34c0ddff9f7ca78cff70055d3c497c7"
+                  },
+                  {
+                      "path":  "docs/process/REPO_AND_PYPI_RELEASE_CHECKLIST.md",
+                      "bytes":  3820,
+                      "sha256":  "4420c538b1401317baa4daf0a72b4fb0c9014ffab23d0905e6ac1a34b15dc627"
+                  },
+                  {
+                      "path":  "docs/process/SESSION_LOG.md",
+                      "bytes":  3818,
+                      "sha256":  "cbb8f4d61b9412e47b2f217a39699f0f789b53394d3687f904d274b0b97f874b"
+                  },
+                  {
+                      "path":  "docs/process/SESSION_TOKEN_REPORT.md",
+                      "bytes":  15611,
+                      "sha256":  "50ff51c8810e21953a43443641017396c53691417c3e11413f14fa9ba9f48c28"
+                  },
+                  {
+                      "path":  "docs/releases/v3.0.3.md",
+                      "bytes":  2615,
+                      "sha256":  "9e971c6d776d94636ac7b6d8567158f4b6965241320038d730ae13014d40c9eb"
+                  },
+                  {
+                      "path":  "docs/releases/v3.2.1.md",
+                      "bytes":  4790,
+                      "sha256":  "5357b1353aab2b70416457f85df8aac0372f1257ac5089c5e81e70954facc6f1"
+                  },
+                  {
+                      "path":  "docs/releases/v3.2.2.md",
+                      "bytes":  3876,
+                      "sha256":  "47f3fe40a8eae774ac41462cbd02648068b76168faeba93a6a7968b8afab4c18"
+                  },
+                  {
+                      "path":  "docs/upstream-workflows/global_sync.yml",
+                      "bytes":  1984,
+                      "sha256":  "ffc1c8c200dd50caa185d91d69aeddbf51ba22c3a54bf766217eccf11aecd8b1"
+                  },
+                  {
+                      "path":  "docs/upstream-workflows/pypi-publish.yml",
+                      "bytes":  5856,
+                      "sha256":  "3979f4506ae463fb0e59178faf629cb24308c80fd373f6e86e5724fe78d937a9"
+                  },
+                  {
+                      "path":  "docs/upstream-workflows/sentinel.yml",
+                      "bytes":  2891,
+                      "sha256":  "b00ea1127e880e0140ae0b28415317252f31ea4c39897040a682fefd4aa9d857"
+                  },
+                  {
+                      "path":  "ETHERNIUM_UNIVERSAL_DNA.md",
+                      "bytes":  2146,
+                      "sha256":  "d5012ac6a83c29dbc96e25f180d7c53ab98c28ed5ef6a44821871abb4935ebc7"
+                  },
+                  {
+                      "path":  "examples/demo-folder/file1.py",
+                      "bytes":  217,
+                      "sha256":  "e3c33838406281ac88096f5edf2970926b40d50d21f44f2b4ce7a9f797f027da"
+                  },
+                  {
+                      "path":  "examples/demo-folder/README.md",
+                      "bytes":  24,
+                      "sha256":  "b327a74d68549b8047133b7e1afb1215e4f155b5d52c366909664c28171a4dc9"
+                  },
+                  {
+                      "path":  "examples/drift_detection_demo.py",
+                      "bytes":  2063,
+                      "sha256":  "63f19f36b05e9e8d20b7963c478e96fe2abf0665e75c4fc3800f69885f29209a"
+                  },
+                  {
+                      "path":  "examples/example-project/DAILY_HANDOFF_SCENARIO.md",
+                      "bytes":  1709,
+                      "sha256":  "d0b15b42db9a42dd2d2f8bce24b2ec8669cb690e6e0ebbc35a404e6978a01059"
+                  },
+                  {
+                      "path":  "examples/example-project/README.md",
+                      "bytes":  1605,
+                      "sha256":  "cddcd0f33726e8fca8f9ff4558649ada26df94c2c6a1076c6dd6af428a5e62cb"
+                  },
+                  {
+                      "path":  "examples/example-project/STATE.json",
+                      "bytes":  44,
+                      "sha256":  "42064be5dabea23716116b783e71e45fe6f98418cde20fc5fa17d8a9ba7ac359"
+                  },
+                  {
+                      "path":  "GETTING_STARTED.md",
+                      "bytes":  4105,
+                      "sha256":  "d9874f136c278f99d316dde6f734d7177b55f6f19c2fcaee3b31c73160808773"
+                  },
+                  {
+                      "path":  "GITHUB_PROFILE_README_DRAFT.md",
+                      "bytes":  3670,
+                      "sha256":  "ff7085bfaa69d80c733de05a246347efdcf63778e3f7266ee501e6c43d28f1f6"
+                  },
+                  {
+                      "path":  "GOVERNANCE.md",
+                      "bytes":  1637,
+                      "sha256":  "ccab3232acb25857b9937071b7ba04877ddcf1524c626b11df380c94b49645f5"
+                  },
+                  {
+                      "path":  "HOW_TO_USE_IT.md",
+                      "bytes":  2703,
+                      "sha256":  "2e5369a0eb5c5b740d377170e4cb190fa801fe4de77dd44d7f4e3e82ad38ecc9"
+                  },
+                  {
+                      "path":  "LICENSE",
+                      "bytes":  1088,
+                      "sha256":  "d3a0020af058f178cc2a75469f41c867afea80dd10422826457ee5b9c05ee0b0"
+                  },
+                  {
+                      "path":  "LORE.md",
+                      "bytes":  2781,
+                      "sha256":  "b2c64800783b736423d8f0abbc7ddd7e1c7ff0746c13470414d76d62135b77b5"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/README_ar.md",
+                      "bytes":  2324,
+                      "sha256":  "4098170acdccd3b7250ec064579f64a486bdf06163032ef2a3be5692ae9a3e17"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/README_de.md",
+                      "bytes":  1891,
+                      "sha256":  "ed4b3cb56c7520c84bb75848272f7fedda04eeec497e36444eb5b5fd31b6fc18"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/README_en.md",
+                      "bytes":  846,
+                      "sha256":  "0b7e217e1cbdca71ac47f42d30b6be9e7ccf3e92e09a41f1ccff30354fa95321"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/README_es.md",
+                      "bytes":  1796,
+                      "sha256":  "354d359f50c3715f6ca713bfafd402d96e904b69e912105c49edd9653507166b"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/README_fr.md",
+                      "bytes":  1881,
+                      "sha256":  "d22ca9e611776394ebf6436ae53f83173cac5eb9600833da9f7e1706bd686d81"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/README_it.md",
+                      "bytes":  1856,
+                      "sha256":  "69f56215e4d5602973fea6f8a2db21164bb250ea85976cb598af2a6612c6ca9c"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/README_ja.md",
+                      "bytes":  2179,
+                      "sha256":  "c4f450dc5d2755a00299072dad490111b8657bf09d0196fea370edf361053974"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/README_ko.md",
+                      "bytes":  1896,
+                      "sha256":  "5af40bf9844f584db19c05d3d8cb6f2c12d34ce2087bfb9fc3d65be15735c778"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/README_pt.md",
+                      "bytes":  1850,
+                      "sha256":  "d4e46091ca4236f2ff06f61761ad716fe8e0bd59d6fdebbd9c2c317e33fba52f"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/README_ru.md",
+                      "bytes":  2775,
+                      "sha256":  "d58e1b773957637e79b1f50e7d386ae98c420d11311c652c7d55d6c3624f4b00"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/README_zh.md",
+                      "bytes":  1644,
+                      "sha256":  "b5964b42422db3ba1047fa0e01bfdc4fba543539fb250d3dfa89337ea3244e94"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0_de.md",
+                      "bytes":  2205,
+                      "sha256":  "8756758a6f191075ff17fbbe57c7f4cc48a9b5c4be8c84c88f3296934f87b75d"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0_es.md",
+                      "bytes":  2225,
+                      "sha256":  "bf650499dae3d5b04bca81119567ca71f112dd8fa96bad335886bb9a5970b88a"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0_fr.md",
+                      "bytes":  2205,
+                      "sha256":  "2fdc2f0ad6f636ba7d788e681afc2150760f0465e93ac6fcedad1089f519a070"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0_it.md",
+                      "bytes":  2205,
+                      "sha256":  "9730a08fcc4204d6a0205013fcb45e6f214986c7ad2e0ead34b50ca2a5d0cf02"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0_ja.md",
+                      "bytes":  2426,
+                      "sha256":  "22f50295b8da24cfef619ab45698d0363ffc792020f70b88f4eab79679420082"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0_pt.md",
+                      "bytes":  2205,
+                      "sha256":  "2e73e5ca20fe6a63906de34a34ddd9af99157ee1f1caf476f49d4f074d91b79e"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0_ru.md",
+                      "bytes":  2780,
+                      "sha256":  "62ea291a26086f213a29d238472f117612752ec5788505d7c03aa0d28a9639ab"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0_zh.md",
+                      "bytes":  2056,
+                      "sha256":  "c5724f70a50a61fbb75b4b6a54518b3b832eb1bd9342ab9489c015a933963dae"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0-NEXUS_de.md",
+                      "bytes":  2205,
+                      "sha256":  "8756758a6f191075ff17fbbe57c7f4cc48a9b5c4be8c84c88f3296934f87b75d"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0-NEXUS_en.md",
+                      "bytes":  2205,
+                      "sha256":  "32adb2150429559c195dc99568ecd6fab22ef4c20f9e5c54a6f1dce4e089473d"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0-NEXUS_es.md",
+                      "bytes":  2225,
+                      "sha256":  "bf650499dae3d5b04bca81119567ca71f112dd8fa96bad335886bb9a5970b88a"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0-NEXUS_fr.md",
+                      "bytes":  2205,
+                      "sha256":  "2fdc2f0ad6f636ba7d788e681afc2150760f0465e93ac6fcedad1089f519a070"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0-NEXUS_it.md",
+                      "bytes":  2205,
+                      "sha256":  "9730a08fcc4204d6a0205013fcb45e6f214986c7ad2e0ead34b50ca2a5d0cf02"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0-NEXUS_ja.md",
+                      "bytes":  2426,
+                      "sha256":  "22f50295b8da24cfef619ab45698d0363ffc792020f70b88f4eab79679420082"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0-NEXUS_pt.md",
+                      "bytes":  2205,
+                      "sha256":  "2e73e5ca20fe6a63906de34a34ddd9af99157ee1f1caf476f49d4f074d91b79e"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0-NEXUS_ru.md",
+                      "bytes":  2780,
+                      "sha256":  "62ea291a26086f213a29d238472f117612752ec5788505d7c03aa0d28a9639ab"
+                  },
+                  {
+                      "path":  "OTHER_LANGUAGES/RELEASE_v2.1.0-NEXUS_zh.md",
+                      "bytes":  2056,
+                      "sha256":  "c5724f70a50a61fbb75b4b6a54518b3b832eb1bd9342ab9489c015a933963dae"
+                  },
+                  {
+                      "path":  "PERSONAL_LINE.md",
+                      "bytes":  398,
+                      "sha256":  "dc950d5c8a954e5ee52b1ee071bac89fe397c2d88713fc8e8b2ca57f3b949c83"
+                  },
+                  {
+                      "path":  "PROJECT_CONTEXT.md",
+                      "bytes":  5249,
+                      "sha256":  "a694bcd51e1fcf38b9eb83fc57f7cf1b9894b4c75977970e2f6be3e4a8a3ee97"
+                  },
+                  {
+                      "path":  "PROJECT_DNA.ene.md.locked",
+                      "bytes":  8204,
+                      "sha256":  "1b10779ee96ad6b4f7aef99f1d3af7a6275ce3e04ba9bc008ba90009e4b7db27"
+                  },
+                  {
+                      "path":  "PROJECT_DNA.md",
+                      "bytes":  6123,
+                      "sha256":  "eb3b66c21700a7392ec97ee2d762d37404fe3817d2d9d1088f3603e07d1371af"
+                  },
+                  {
+                      "path":  "pyproject.toml",
+                      "bytes":  1986,
+                      "sha256":  "df0b8a4be6095342a351aba8c552c7268952e954f7a49c4f33e11f0a7175c937"
+                  },
+                  {
+                      "path":  "pytest.ini",
+                      "bytes":  66,
+                      "sha256":  "dd7a11018bda2c8ea621a562b6c940c85965a863b324c8bfb89f284e13094924"
+                  },
+                  {
+                      "path":  "README.md",
+                      "bytes":  27483,
+                      "sha256":  "82908574496cdf71eef1e059488bbd80b5d3dc0a28293bf47430cd96843a3e93"
+                  },
+                  {
+                      "path":  "RELEASE_NOTES_MANIFEST.md",
+                      "bytes":  6878,
+                      "sha256":  "afb7c9aab6e3db5bd1862d87e39928b30d908d76dac5b587811900429e749231"
+                  },
+                  {
+                      "path":  "scripts/audit_all.py",
+                      "bytes":  4088,
+                      "sha256":  "298f3e8f1e071564105cd9e54d8903a73810a3eddff75d025654d15ea1edaa64"
+                  },
+                  {
+                      "path":  "scripts/autophagy_report.py",
+                      "bytes":  5123,
+                      "sha256":  "053bcabce55a7dfda0bd7a7753462ab782264571b660cd4eb6406870eacd0fec"
+                  },
+                  {
+                      "path":  "scripts/bootstrap-local-machine.ps1",
+                      "bytes":  6537,
+                      "sha256":  "0513d903e84c7ac8268c2ed584b698600f8b3d2a5f1253c3c2ecf2fe9d23af88"
+                  },
+                  {
+                      "path":  "scripts/golden_baseline.py",
+                      "bytes":  6581,
+                      "sha256":  "f27361c46517bc6ccdab649f51a7875380ddd05c003c5829e2438c5f529f57c0"
+                  },
+                  {
+                      "path":  "scripts/health_guard.py",
+                      "bytes":  7909,
+                      "sha256":  "1ea4933b3e1a847ba226e530586f362c75ff92e1df08dd3069d3c6ba23381a71"
+                  },
+                  {
+                      "path":  "scripts/redteam.py",
+                      "bytes":  9121,
+                      "sha256":  "cbe748ec882ed46b808ad21904a800255b413e85acdfbd40b9b14b633f9a4270"
+                  },
+                  {
+                      "path":  "scripts/verify_personal_release.py",
+                      "bytes":  1918,
+                      "sha256":  "3920f7df37abc52799b1e7d0a2e2c28089e25e45b460e886abde7a8747b02fe8"
+                  },
+                  {
+                      "path":  "SECURITY.md",
+                      "bytes":  1655,
+                      "sha256":  "178e56cf626239f243892a3ffee675925ae1e063d51c17ad4006ee11fadb2be7"
+                  },
+                  {
+                      "path":  "STATE.json",
+                      "bytes":  1907,
+                      "sha256":  "1c559dffe4b30fda2ccdc7c1debf4948ac6e9a35279de65aee5d83b23b7e6463"
+                  },
+                  {
+                      "path":  "tests/fix_hook.py",
+                      "bytes":  623,
+                      "sha256":  "eaca9e4ab85d5d8a9f9c0d180dabdfe9f707a31b900484e2df65904ad2614db5"
+                  },
+                  {
+                      "path":  "tests/parity_diagnostic.py",
+                      "bytes":  2549,
+                      "sha256":  "bf578ba56a6479677fbb7489c49b46cceb8fa07b8d460b6806496b58176a08ac"
+                  },
+                  {
+                      "path":  "tests/test_continuity.py",
+                      "bytes":  2114,
+                      "sha256":  "78b4e58d6d3388831d9cd62db1cf68ff34c6dbe36724724944a05f0ad300918d"
+                  },
+                  {
+                      "path":  "tests/test_edition_parity.py",
+                      "bytes":  3614,
+                      "sha256":  "c42c97f2221459e2f62b34e1caabd24b8464010ae88e90f4c74224374a97f0dc"
+                  },
+                  {
+                      "path":  "VERSION",
+                      "bytes":  6,
+                      "sha256":  "79b9fb49a71869140833837e3a27ae1722a41faf59746519fde5e1346f9dd5b8"
+                  }
+              ]
+}
