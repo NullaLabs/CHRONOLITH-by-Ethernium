@@ -169,9 +169,18 @@ def crystallize_readme(repo_root: Path, merkle_root: str):
         console.log(f"[bold magenta][✔][/bold magenta] README Crystallized: {merkle_root[:8]}")
 
 
-def _compute_leaves(root: Path, scan_source: bool) -> tuple[list[Path], list[Path], dict[str, str]]:
+def _compute_leaves(
+    root: Path,
+    scan_source: bool,
+    *,
+    persist_cache: bool = True,
+) -> tuple[list[Path], list[Path], dict[str, str]]:
     """Shared leaf computation for check/prove: path-bound leaves keyed by
-    relative path, hashed through the incremental mtime+size cache."""
+    relative path, hashed through the incremental mtime+size cache.
+
+    Third-party verification is a read-only contract, so callers can use the
+    cache in memory without persisting it into the repository being verified.
+    """
     doc_files, source_files = _resolve_scan_paths(root, scan_source)
     cache = automation_common.load_hash_cache(root)
     leaves: dict[str, str] = {}
@@ -180,7 +189,8 @@ def _compute_leaves(root: Path, scan_source: bool) -> tuple[list[Path], list[Pat
         leaves[rel] = automation_common.path_bound_leaf(
             rel, automation_common.calculate_sha256_cached(f, cache)
         )
-    automation_common.save_hash_cache(root, cache)
+    if persist_cache:
+        automation_common.save_hash_cache(root, cache)
     return doc_files, source_files, leaves
 
 
@@ -672,7 +682,7 @@ def prove(
     """Emit a Merkle inclusion proof: verify ONE file belongs to the DNA root in
     O(log n) hashes, without rehashing the repository."""
     root = repo_root.resolve()
-    _docs, _src, leaves = _compute_leaves(root, scan_source)
+    _docs, _src, leaves = _compute_leaves(root, scan_source, persist_cache=False)
     rel = file.as_posix() if not file.is_absolute() else file.resolve().relative_to(root).as_posix()
     if rel not in leaves:
         console.print(f"[bold red][!] '{rel}' is not a scanned nucleotide (docs/source under the root).[/bold red]")
@@ -757,7 +767,7 @@ def verify(
         ok = ok and matched
 
     # 1. Content vs signed baseline.
-    _docs, _src, leaves = _compute_leaves(root, scan_source)
+    _docs, _src, leaves = _compute_leaves(root, scan_source, persist_cache=False)
     computed_root = automation_common.build_merkle_tree(list(leaves.values()))
     state_path = root / ".chronolith" / "STATE.json"
     if not state_path.exists():

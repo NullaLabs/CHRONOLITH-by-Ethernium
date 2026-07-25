@@ -107,6 +107,20 @@ class TestCliSurface(unittest.TestCase):
                     failures.append(f"{command}: {output.strip().splitlines()[-1][:120]}")
             self.assertEqual(failures, [], f"commands that crashed: {failures}")
 
+    def test_verify_does_not_write_to_uninitialized_target(self):
+        """The skeptic verifier must leave even an uninitialized target untouched."""
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
+            root = Path(tmp)
+            (root / "DOC.md").write_text("# Uninitialized target\n", encoding="utf-8")
+            before = sorted(path.relative_to(root).as_posix() for path in root.rglob("*"))
+
+            result = run(["verify", "--repo-root", str(root), "--json"])
+
+            self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+            self.assertIn("no baseline", result.stdout)
+            after = sorted(path.relative_to(root).as_posix() for path in root.rglob("*"))
+            self.assertEqual(after, before, "verify created state in the target repository")
+
 
 if __name__ == "__main__":
     unittest.main()
