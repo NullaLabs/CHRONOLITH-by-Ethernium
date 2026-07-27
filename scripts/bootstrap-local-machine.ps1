@@ -1,16 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$RootPath = (Get-Location).Path,
-    [string]$VenvName = ".venv",
-    [ValidateSet("openclaw", "ollama", "moltbot")]
-    [string]$ChatProvider = "openclaw",
-    [string]$OpenClawBaseUrl = "http://127.0.0.1:3001",
-    [string]$OllamaBaseUrl = "http://127.0.0.1:11434",
-    [string]$MoltbotBaseUrl = "http://127.0.0.1:3002",
-    [string]$OllamaModel = "llama3.1",
-    [switch]$SkipDashboard,
-    [switch]$StartDashboard,
-    [string]$ConektaPath = "..\CONEKTA"
+    [string]$VenvName = ".venv"
 )
 
 $ErrorActionPreference = "Stop"
@@ -28,36 +19,8 @@ function Assert-Path {
     }
 }
 
-function Set-Or-AppendEnvLine {
-    param(
-        [string]$FilePath,
-        [string]$Key,
-        [string]$Value
-    )
-
-    $escapedKey = [regex]::Escape($Key)
-    $lines = if (Test-Path $FilePath) { Get-Content $FilePath -Encoding UTF8 } else { @() }
-
-    $updated = $false
-    for ($i = 0; $i -lt $lines.Count; $i++) {
-        if ($lines[$i] -match "^${escapedKey}=") {
-            $lines[$i] = "$Key=$Value"
-            $updated = $true
-        }
-    }
-
-    if (-not $updated) {
-        $lines += "$Key=$Value"
-    }
-
-    [System.IO.File]::WriteAllLines($FilePath, $lines, [System.Text.UTF8Encoding]::new($false))
-}
-
 $repoRoot = (Resolve-Path $RootPath).Path
 $venvPath = Join-Path $repoRoot $VenvName
-$conektaPath = if ([System.IO.Path]::IsPathRooted($ConektaPath)) { $ConektaPath } else { Join-Path $repoRoot $ConektaPath }
-$conektaEnvExample = Join-Path $conektaPath ".env.example"
-$conektaEnvLocal = Join-Path $conektaPath ".env.local"
 
 $rootWheel = Get-ChildItem (Join-Path $repoRoot "dist") -Filter "chronolith-*.whl" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 $liteWheel = Get-ChildItem (Join-Path $repoRoot "chronolith-lite\dist") -Filter "ethernium_chronolith_lite-*.whl" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
@@ -95,47 +58,11 @@ Write-Step "Validating core Chronolith CLI commands"
 & $venvPython -m chronolith status | Out-Null
 & $venvPython -m chronolith init --help | Out-Null
 
-if (-not $SkipDashboard -and (Test-Path $conektaPath)) {
-    Write-Step "Preparing CONEKTA environment"
-    Assert-Path $conektaEnvExample "Missing Conekta env template: $conektaEnvExample"
-    if (-not (Test-Path $conektaEnvLocal)) {
-        Copy-Item $conektaEnvExample $conektaEnvLocal
-    }
-
-    Set-Or-AppendEnvLine -FilePath $conektaEnvLocal -Key "CHRONOLITH_CHAT_PROVIDER" -Value $ChatProvider
-    Set-Or-AppendEnvLine -FilePath $conektaEnvLocal -Key "CHRONOLITH_OPENCLAW_BASE_URL" -Value $OpenClawBaseUrl
-    Set-Or-AppendEnvLine -FilePath $conektaEnvLocal -Key "CHRONOLITH_OLLAMA_BASE_URL" -Value $OllamaBaseUrl
-    Set-Or-AppendEnvLine -FilePath $conektaEnvLocal -Key "CHRONOLITH_MOLTBOT_BASE_URL" -Value $MoltbotBaseUrl
-    Set-Or-AppendEnvLine -FilePath $conektaEnvLocal -Key "CHRONOLITH_OLLAMA_MODEL" -Value $OllamaModel
-    Set-Or-AppendEnvLine -FilePath $conektaEnvLocal -Key "CHRONOLITH_OPENCLAW_ENABLED" -Value ($(if ($ChatProvider -eq "openclaw") { "true" } else { "false" }))
-    Set-Or-AppendEnvLine -FilePath $conektaEnvLocal -Key "CHRONOLITH_OLLAMA_ENABLED" -Value ($(if ($ChatProvider -eq "ollama") { "true" } else { "false" }))
-    Set-Or-AppendEnvLine -FilePath $conektaEnvLocal -Key "CHRONOLITH_MOLTBOT_ENABLED" -Value ($(if ($ChatProvider -eq "moltbot") { "true" } else { "false" }))
-
-    Write-Step "Installing CONEKTA dependencies"
-    Push-Location $conektaPath
-    try {
-        npm install
-
-        Write-Step "Building CONEKTA"
-        npm run build
-
-        if ($StartDashboard) {
-            Write-Step "Starting CONEKTA"
-            npm run start
-        }
-    }
-    finally {
-        Pop-Location
-    }
-} elseif (-not $SkipDashboard) {
-    Write-Step "CONEKTA not found at $conektaPath; skipping external UI bootstrap"
-}
-
 Write-Step "Bootstrap complete"
 Write-Host "Virtual environment: $venvPath" -ForegroundColor Green
-Write-Host "CONEKTA path: $conektaPath" -ForegroundColor Green
-Write-Host "Chat provider: $ChatProvider" -ForegroundColor Green
 Write-Host ""
+Write-Host "CONEKTA is intentionally not configured here." -ForegroundColor Yellow
+Write-Host "Ethernium Personal reaches Chronolith read-only through FRUGAL." -ForegroundColor Yellow
 Write-Host "PyPI upload was intentionally skipped." -ForegroundColor Yellow
 Write-Host "When ready, upload from a machine with Twine credentials using:" -ForegroundColor Yellow
 Write-Host "  python -m twine upload dist/chronolith-*.whl dist/chronolith-*.tar.gz"

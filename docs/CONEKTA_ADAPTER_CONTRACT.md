@@ -20,18 +20,19 @@ CONEKTA owns:
 - linked project visualization
 - operator workflows
 
-## Recommended Local API
+## Ethernium Personal Integration
 
-The CONEKTA adapter should use explicit endpoints or CLI wrappers:
+CONEKTA must not call Chronolith mutation commands or configure model
+providers. The governed path is:
 
 ```text
-GET  /state
-GET  /events
-POST /actions/audit
-POST /actions/scan
-POST /actions/seal
-POST /actions/crystallize
+CONEKTA -> authenticated loopback FRUGAL
+        -> POST /ecosystem/chronolith/verify
+        -> Chronolith read-only verification adapter
 ```
+
+Standalone Chronolith CLI commands remain product capabilities. They are not
+implicitly available through the Ethernium Personal dashboard.
 
 ## Fail-Closed Rules
 
@@ -42,6 +43,7 @@ The adapter must fail closed when:
 - governance health check fails
 - requested action is not available in the installed package version
 - a command would mutate protected state without explicit confirmation
+- a dashboard request attempts to sign, anchor, seal or rewrite a baseline
 
 ## Release Rule
 
