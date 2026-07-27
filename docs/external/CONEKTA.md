@@ -41,19 +41,23 @@ The integration contract remains in:
 docs/CONEKTA_ADAPTER_CONTRACT.md
 ```
 
-Recommended bridge:
+Governed Ethernium Personal bridge:
 
 ```text
-CONEKTA UI -> local adapter/API -> Chronolith CLI/runtime -> STATE.json / reports
+CONEKTA UI -> FRUGAL authenticated loopback API
+           -> read-only Chronolith verifier -> verdict/evidence
 ```
 
 ## Bootstrap
 
-The local bootstrap script can point at the external CONEKTA path:
+The local bootstrap installs and validates Chronolith only:
 
 ```powershell
-.\scripts\bootstrap-local-machine.ps1 -ConektaPath ..\CONEKTA
+.\scripts\bootstrap-local-machine.ps1
 ```
+
+It intentionally does not write CONEKTA environment files, install its
+dependencies or configure model providers.
 
 ## Boundary
 
