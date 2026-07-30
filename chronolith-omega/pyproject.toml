@@ -11,7 +11,7 @@ authors = [
 description = "Semantic search over a governed corpus, entirely local. Answers why a decision was made, across languages, and maps the decision lineage."
 readme = "README.md"
 requires-python = ">=3.9"
-license = "MIT"
+license = "MIT OR Apache-2.0"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",

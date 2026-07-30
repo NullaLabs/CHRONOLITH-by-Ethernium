@@ -55,7 +55,7 @@ Write-Step "Installing local wheel artifacts"
 
 Write-Step "Validating core Chronolith CLI commands"
 & $venvPython -m chronolith --help | Out-Null
-& $venvPython -m chronolith status | Out-Null
+& $venvPython -m chronolith check --help | Out-Null
 & $venvPython -m chronolith init --help | Out-Null
 
 Write-Step "Bootstrap complete"

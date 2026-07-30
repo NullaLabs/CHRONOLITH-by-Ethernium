@@ -1,5 +1,5 @@
 {
-  "change_contract": "docs/change-contracts/2026-07-19-release-3-2-2.md",
+  "change_contract": "docs/change-contracts/2026-07-29-dual-license-and-doc-honesty.md",
   "files": {
     ".chronolith/feature-registry.json": {
       "bytes": 2395,
@@ -17,7 +17,11 @@
       "bytes": 1637,
       "sha256": "ccab3232acb25857b9937071b7ba04877ddcf1524c626b11df380c94b49645f5"
     },
-    "LICENSE": {
+    "LICENSE-APACHE": {
+      "bytes": 11357,
+      "sha256": "43eb4ba24cd81ceba7fd598002747c50a33b7b30932eb4a8756ed0869fe91e76"
+    },
+    "LICENSE-MIT": {
       "bytes": 1088,
       "sha256": "d3a0020af058f178cc2a75469f41c867afea80dd10422826457ee5b9c05ee0b0"
     },
@@ -38,23 +42,23 @@
       "sha256": "79b9fb49a71869140833837e3a27ae1722a41faf59746519fde5e1346f9dd5b8"
     },
     "pyproject.toml": {
-      "bytes": 1986,
-      "sha256": "df0b8a4be6095342a351aba8c552c7268952e954f7a49c4f33e11f0a7175c937"
+      "bytes": 2000,
+      "sha256": "652941473f24683028a8486dd1233f99da064d751e215ef66c30e0c5478727be"
     },
     "scripts/autophagy_report.py": {
       "bytes": 5123,
       "sha256": "053bcabce55a7dfda0bd7a7753462ab782264571b660cd4eb6406870eacd0fec"
     },
     "scripts/golden_baseline.py": {
-      "bytes": 6581,
-      "sha256": "f27361c46517bc6ccdab649f51a7875380ddd05c003c5829e2438c5f529f57c0"
+      "bytes": 6607,
+      "sha256": "86ca873c7ac38c71e921eab14f67951d00e26007ad195ee7d09fad296cc298ee"
     },
     "scripts/health_guard.py": {
       "bytes": 7909,
       "sha256": "1ea4933b3e1a847ba226e530586f362c75ff92e1df08dd3069d3c6ba23381a71"
     }
   },
-  "generated_at": "2026-07-21T14:10:54+00:00",
+  "generated_at": "2026-07-30T04:51:28+00:00",
   "generated_by": "python scripts/golden_baseline.py refresh",
   "policy": {
     "destructive": false,

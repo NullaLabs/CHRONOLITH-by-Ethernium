@@ -11,7 +11,7 @@ authors = [
 description = "One hash for a project's documentation, keyed by path: a rename or a byte changes it. Signed baselines, Merkle proofs, Bitcoin anchoring. Lite, Pro and Omega editions."
 readme = "README.md"
 requires-python = ">=3.10"
-license = "MIT"
+license = "MIT OR Apache-2.0"
 keywords = ["ai", "context", "chronolith", "llm", "handover", "merkle-tree", "cybersecurity", "rag", "automation", "entropy", "governance"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",

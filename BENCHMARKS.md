@@ -1,36 +1,59 @@
-# 📊 Ethernium Performance Benchmarks
-**Date:** April 5, 2026
-**Version:** v2.1.0 Nexus
+# 📊 Chronolith Performance Benchmarks
 
-This document presents the technical performance and results of the **Chronolith Framework** under industrial workloads.
+**Current version:** 3.2.2
 
-## 🏁 Scan & Crystallization Latency
-Tests performed on a repository with **512 files** (~10MB total metadata size).
+This document separates what is **verified** from what is **historical or not yet
+re-measured**, because a drift-detection tool that overstates its own numbers is
+exactly the thing it exists to catch.
 
-| Profile | Engine | File Count | Latency (Avg) | CPU Overhead |
-| :--- | :--- | :--- | :--- | :--- |
-| **Initial Scan** | Lite | 500+ | 145ms | < 2% |
-| **Incremental Update**| Lite | 1 (Change) | **12ms** | < 0.5% |
-| **DNA Audit** | Pro | 500+ | 410ms | < 5% |
-| **Deep Parity Check** | Pro | 500+ | 850ms | < 10% |
+## 🧬 Cryptographic reliability (Merkle integrity) — verified
 
-## 🧬 Criptographic Reliability (Merkle Integrity)
-Tests on bitwise corruption detection.
+These behaviours are covered by the test suite (81 Pro tests, green) and were
+re-confirmed by hand on 3.2.2: introduce the change, run `chronolith check`,
+observe the exit code.
 
-| Test Case | Error Type | Detection Status | Block Action |
+| Test case | Error type | Detection | Block action |
 | :--- | :--- | :--- | :--- |
-| **1-bit alteration** | File Byte Change | **[SUCCESS]** | `exit 1` (HALT) |
-| **Metadata drift** | Filename Rename | **[SUCCESS]** | `exit 1` (HALT) |
-| **Hidden insertion** | New .md file | **[SUCCESS]** | `exit 1` (HALT) |
-| **Permutation** | File reordering | **[SUCCESS]** | `exit 1` (HALT) |
+| 1-bit alteration | File byte change | **detected** | `exit 1` (fail-closed halt) |
+| Metadata drift | Filename rename | **detected** | `exit 1` (fail-closed halt) |
+| Hidden insertion | New `.md` file | **detected** | `exit 1` (fail-closed halt) |
+| Permutation | File reordering | **detected** | `exit 1` (fail-closed halt) |
 
-## 🧠 Cognitive Mapping (Omega Exclusive)
-Tests on RAG Context Ingestion.
+Reproduce any row: edit a tracked file, run `chronolith check`, and check `$?`.
+A clean tree exits `0`; any drift exits `1` unless you opt out with
+`CHRONOLITH_MODE=permissive`.
 
-| Operation | Scale | Ingestion Time | Retrieval Accuracy |
-| :--- | :--- | :--- | :--- |
-| **Graph Vector Index**| 1000 nodes | 1.8s | 99.4% |
-| **Drift Prediction** | 5 sessions | 0.9s | Approved |
+## 🏁 Scan latency
+
+**Current (3.2.2), end-to-end CLI wall time.** Measured on a 21-file markdown
+corpus, averaged over 3 warm runs on the maintainer's machine:
+
+| Operation | Corpus | Wall time (avg) |
+| :--- | :--- | ---: |
+| `chronolith check` (full) | 21 files | ~665 ms |
+
+This is *end-to-end* time and is dominated by Python interpreter start-up and Rich
+rendering, not by the Merkle scan itself. It is not comparable to the pure
+in-process scan micro-benchmarks below.
+
+**Historical (v2.1.0 Nexus), pure in-process scan time.** Kept for reference; not
+re-measured on 3.2.2. Treat as indicative of the scan algorithm's order of
+magnitude, not as a current guarantee:
+
+| Profile | Engine | File count | Latency (avg) |
+| :--- | :--- | :--- | ---: |
+| Initial scan | Lite | 500+ | 145 ms |
+| Incremental update | Lite | 1 changed | 12 ms |
+| DNA audit | Pro | 500+ | 410 ms |
+| Deep parity check | Pro | 500+ | 850 ms |
+
+## 🧠 Cognitive mapping (Omega) — not independently reproduced
+
+The earlier "1.8 s ingestion / 99.4 % retrieval accuracy / drift prediction
+approved" figures are **not reproduced in this pass** and are not backed by a
+committed measurement harness. They are omitted as headline results until there is
+a script anyone can run to regenerate them, the same bar the Merkle table meets.
 
 ---
-*Results verified via GitHub Actions (Industrial Guardian).*
+*The integrity table is exercised by the test suite in CI. The latency figures are
+local measurements, not CI-gated — CI runs the tests, it does not benchmark.*

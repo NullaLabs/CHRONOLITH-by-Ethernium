@@ -11,7 +11,7 @@ authors = [
 description = "Everything in Lite, plus proof a stranger can check: Ed25519-signed baselines, an append-only transparency chain, O(log n) Merkle inclusion proofs and Bitcoin anchoring. Its verify command reports what it did not prove."
 readme = "README.md"
 requires-python = ">=3.8"
-license = "MIT"
+license = "MIT OR Apache-2.0"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",

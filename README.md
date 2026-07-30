@@ -19,7 +19,7 @@
 [![Industrial Guardian](https://github.com/SteveBlackbeard/CHRONOLITH-by-Ethernium/actions/workflows/industrial_guardian.yml/badge.svg)](https://github.com/SteveBlackbeard/CHRONOLITH-by-Ethernium/actions/workflows/industrial_guardian.yml)
 [![PyPI](https://img.shields.io/pypi/v/chronolith-pro?label=pro&color=blueviolet)](https://pypi.org/project/chronolith-pro/)
 [![Downloads](https://img.shields.io/pypi/dm/chronolith-pro?color=blueviolet)](https://pypi.org/project/chronolith-pro/)
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/SteveBlackbeard/CHRONOLITH-by-Ethernium/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-green)](https://github.com/SteveBlackbeard/CHRONOLITH-by-Ethernium#license)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![Bitcoin Anchor](https://img.shields.io/badge/bitcoin%20anchor-block%20958484-f7931a)](https://github.com/SteveBlackbeard/CHRONOLITH-by-Ethernium/tree/main/docs/evidence)
 
@@ -85,7 +85,7 @@ pip install chronolith
 chronolith init
 
 # Verify state consistency
-chronolith status
+chronolith check
 
 # [NEW] Audit project cognitive weight (tokens)
 chronolith-tokens scan
@@ -216,6 +216,8 @@ logged decision becomes a node, chained in the order it was taken.
 
 ## External Tools
 **[Seneschal](https://github.com/SteveBlackbeard/SENESCHAL-by-Ethernium)** is the external agent-operations layer for token frugality, prompt-risk scanning, scoped capabilities, MCP, and local/cloud routing. Chronolith remains the Python runtime and governance core.
+
+**[CONEKTA](https://github.com/SteveBlackbeard/CONEKTA-by-Ethernium)** is the optional local-first dashboard — a cockpit that renders the DNA transparency chain and Seneschal's state **read-only**, through the governed FRUGAL verifier boundary (see [docs/external/CONEKTA.md](./docs/external/CONEKTA.md)). It visualizes the ecosystem; it does not govern it.
 > [!TIP]
 > **READ MORE:** [**docs/external/README.md**](./docs/external/README.md)
 
@@ -516,12 +518,14 @@ The governed runtime phase is protected by explicit contracts, health checks, an
 | `chronolith-pro/.chronolith/registry/README.md` | Registry notes for internal chronolith bookkeeping. |
 
 ### Release Status
-`v3.0.3` is the next governed release target. PyPI still exposes `v3.0.2` until the immutable upload is performed.
+Current release: **3.2.2**, live on PyPI for all four packages.
 
-Release notes: [`docs/releases/v3.0.3.md`](./docs/releases/v3.0.3.md)
+### Published PyPI Links
+- https://pypi.org/project/chronolith/
+- https://pypi.org/project/chronolith-lite/
+- https://pypi.org/project/chronolith-pro/
+- https://pypi.org/project/chronolith-omega/
 
-### Published PyPI Links (v3.0.2)
-- `https://pypi.org/project/chronolith/3.0.2/`
-- `https://pypi.org/project/chronolith-lite/3.0.2/`
-- `https://pypi.org/project/chronolith-pro/3.0.2/`
-- `https://pypi.org/project/chronolith-omega/3.0.2/`
+## License
+
+Licensed under either of [MIT](LICENSE-MIT) or [Apache License 2.0](LICENSE-APACHE) at your option. Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in this work shall be dual licensed as above, without any additional terms or conditions.

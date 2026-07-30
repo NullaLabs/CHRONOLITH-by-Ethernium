@@ -32,7 +32,8 @@ BASELINE_PATH = ROOT / ".chronolith" / "golden-baseline.json"
 # only teaches people to ignore a check that is always failing — which is
 # exactly when a real drift slips through.
 DEFAULT_PATHS = [
-    "LICENSE",
+    "LICENSE-MIT",
+    "LICENSE-APACHE",
     "VERSION",
     "pyproject.toml",
     "PROJECT_CONTEXT.md",
