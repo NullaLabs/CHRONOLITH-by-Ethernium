@@ -1,0 +1,71 @@
+[CmdletBinding()]
+param(
+    [string]$RootPath = (Get-Location).Path,
+    [string]$VenvName = ".venv"
+)
+
+$ErrorActionPreference = "Stop"
+
+function Write-Step {
+    param([string]$Message)
+    Write-Host ""
+    Write-Host "==> $Message" -ForegroundColor Cyan
+}
+
+function Assert-Path {
+    param([string]$PathToCheck, [string]$Message)
+    if (-not (Test-Path $PathToCheck)) {
+        throw $Message
+    }
+}
+
+$repoRoot = (Resolve-Path $RootPath).Path
+$venvPath = Join-Path $repoRoot $VenvName
+
+$rootWheel = Get-ChildItem (Join-Path $repoRoot "dist") -Filter "chronolith-*.whl" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$liteWheel = Get-ChildItem (Join-Path $repoRoot "chronolith-lite\dist") -Filter "ethernium_chronolith_lite-*.whl" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$proWheel = Get-ChildItem (Join-Path $repoRoot "chronolith-pro\dist") -Filter "chronolith_pro-*.whl" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$omegaWheel = Get-ChildItem (Join-Path $repoRoot "chronolith-omega\dist") -Filter "ethernium_chronolith_omega-*.whl" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+
+Assert-Path $repoRoot "Repository root not found: $repoRoot"
+if (-not $rootWheel) { throw "Missing root wheel in dist/. Build artifacts are required before bootstrap." }
+if (-not $liteWheel) { throw "Missing Lite wheel in chronolith-lite/dist/." }
+if (-not $proWheel) { throw "Missing Pro wheel in chronolith-pro/dist/." }
+if (-not $omegaWheel) { throw "Missing Omega wheel in chronolith-omega/dist/." }
+
+Write-Step "Creating or reusing virtual environment at $venvPath"
+if (-not (Test-Path $venvPath)) {
+    python -m venv $venvPath
+}
+
+$venvPython = Join-Path $venvPath "Scripts\python.exe"
+$venvPip = Join-Path $venvPath "Scripts\pip.exe"
+
+Assert-Path $venvPython "Virtual environment python not found at $venvPython"
+Assert-Path $venvPip "Virtual environment pip not found at $venvPip"
+
+Write-Step "Upgrading pip in the virtual environment"
+& $venvPython -m pip install --upgrade pip
+
+Write-Step "Installing local wheel artifacts"
+& $venvPip install $rootWheel.FullName
+& $venvPip install $liteWheel.FullName
+& $venvPip install $proWheel.FullName
+& $venvPip install $omegaWheel.FullName
+
+Write-Step "Validating core Chronolith CLI commands"
+& $venvPython -m chronolith --help | Out-Null
+& $venvPython -m chronolith status | Out-Null
+& $venvPython -m chronolith init --help | Out-Null
+
+Write-Step "Bootstrap complete"
+Write-Host "Virtual environment: $venvPath" -ForegroundColor Green
+Write-Host ""
+Write-Host "CONEKTA is intentionally not configured here." -ForegroundColor Yellow
+Write-Host "Ethernium Personal reaches Chronolith read-only through FRUGAL." -ForegroundColor Yellow
+Write-Host "PyPI upload was intentionally skipped." -ForegroundColor Yellow
+Write-Host "When ready, upload from a machine with Twine credentials using:" -ForegroundColor Yellow
+Write-Host "  python -m twine upload dist/chronolith-*.whl dist/chronolith-*.tar.gz"
+Write-Host "  python -m twine upload chronolith-lite/dist/ethernium_chronolith_lite-*.whl chronolith-lite/dist/ethernium_chronolith_lite-*.tar.gz"
+Write-Host "  python -m twine upload chronolith-pro/dist/chronolith_pro-*.whl chronolith-pro/dist/chronolith_pro-*.tar.gz"
+Write-Host "  python -m twine upload chronolith-omega/dist/ethernium_chronolith_omega-*.whl chronolith-omega/dist/ethernium_chronolith_omega-*.tar.gz"

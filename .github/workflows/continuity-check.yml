@@ -1,0 +1,99 @@
+# =============================================================================
+# chronolith-check.yml — Chronolith Reusable Workflow (v3.0.3)
+# =============================================================================
+# Úsalo en tus proyectos agregando:
+#
+#   jobs:
+#     chronolith:
+#       uses: SteveBlackbeard/CHRONOLITH-by-Ethernium/.github/workflows/chronolith-check.yml@v3.0.3
+#
+# Escanea documentación + código fuente, calcula el Merkle Root,
+# detecta secretos, y bloquea el push si hay drift semántico.
+# =============================================================================
+
+name: 🧬 Chronolith DNA Check
+
+on:
+  workflow_call:
+    inputs:
+      scan_source:
+        description: "Scan source code files alongside documentation"
+        required: false
+        default: true
+        type: boolean
+      mode:
+        description: "strict | permissive"
+        required: false
+        default: "strict"
+        type: string
+    secrets:
+      CHRONOLITH_SOVEREIGN_KEY:
+        description: "Optional Ed25519 private key for Sovereign Identity signing"
+        required: false
+
+jobs:
+  chronolith-dna-check:
+    name: "🧬 DNA Synthesis & Drift Detection"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Chronolith
+        run: |
+          pip install chronolith-pro
+
+      - name: Initialize Chronolith (if not present)
+        run: |
+          if [ ! -f .chronolith/STATE.json ]; then
+            chronolith-pro init --no-hook
+          fi
+
+      - name: 🧬 DNA Synthesis — Merkle Root Calculation
+        id: dna
+        run: |
+          echo "::group::📡 Scanning Nucleotides"
+          chronolith-pro check --scan-source=${{ inputs.scan_source }} --strict
+          echo "::endgroup::"
+          
+          # Export Merkle Root for badge
+          if [ -f .chronolith/pro_report.json ]; then
+            MERKLE=$(python -c "import json; print(json.load(open('.chronolith/pro_report.json'))['merkle_root'][:8])")
+            echo "merkle=$MERKLE" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 🛡️ Secret Scan
+        run: |
+          echo "::group::🔍 Scanning for leaked secrets"
+          chronolith-pro check --strict 2>&1 || true
+          echo "::endgroup::"
+
+      - name: 📊 Generate Merkle Badge
+        if: always()
+        run: |
+          mkdir -p .chronolith/badges
+          MERKLE="${{ steps.dna.outputs.merkle || 'ERROR' }}"
+          COLOR="blueviolet"
+          echo "{
+            \"schemaVersion\": 1,
+            \"label\": \"DNA\",
+            \"message\": \"${MERKLE}\",
+            \"color\": \"${COLOR}\",
+            \"isError\": false
+          }" > .chronolith/badges/dna-status.json
+          echo "Badge written: ${MERKLE}"
+
+      - name: ❌ Fail on Drift (strict mode)
+        if: ${{ inputs.mode == 'strict' && failure() }}
+        run: |
+          echo "::error::❌ DNA DRIFT DETECTED: Project state inconsistent with canonical Merkle Root."
+          echo "::error::   Run 'chronolith-pro check' locally to diagnose."
+          exit 1

@@ -1,0 +1,67 @@
+{
+  "change_contract": "docs/change-contracts/2026-07-19-release-3-2-2.md",
+  "files": {
+    ".chronolith/feature-registry.json": {
+      "bytes": 2395,
+      "sha256": "a61ea1cd365a22dca9ae61df4e2cd1681a269a2b0749dc51ce30b2bcdfdee0b4"
+    },
+    ".chronolith/rulebook.json": {
+      "bytes": 3294,
+      "sha256": "c828f3592c577d25af259697f2d96e5bf57cb15d85a3e595c5dd8cb2383c2912"
+    },
+    ".github/workflows/industrial_guardian.yml": {
+      "bytes": 4519,
+      "sha256": "86d5ccd6a4697a12ba267029db07f6d2a2b4895ac68b62f9597cb25d532ecdb3"
+    },
+    "GOVERNANCE.md": {
+      "bytes": 1637,
+      "sha256": "ccab3232acb25857b9937071b7ba04877ddcf1524c626b11df380c94b49645f5"
+    },
+    "LICENSE": {
+      "bytes": 1088,
+      "sha256": "d3a0020af058f178cc2a75469f41c867afea80dd10422826457ee5b9c05ee0b0"
+    },
+    "PROJECT_CONTEXT.md": {
+      "bytes": 5249,
+      "sha256": "a694bcd51e1fcf38b9eb83fc57f7cf1b9894b4c75977970e2f6be3e4a8a3ee97"
+    },
+    "PROJECT_DNA.ene.md.locked": {
+      "bytes": 8204,
+      "sha256": "1b10779ee96ad6b4f7aef99f1d3af7a6275ce3e04ba9bc008ba90009e4b7db27"
+    },
+    "PROJECT_DNA.md": {
+      "bytes": 6123,
+      "sha256": "eb3b66c21700a7392ec97ee2d762d37404fe3817d2d9d1088f3603e07d1371af"
+    },
+    "VERSION": {
+      "bytes": 6,
+      "sha256": "79b9fb49a71869140833837e3a27ae1722a41faf59746519fde5e1346f9dd5b8"
+    },
+    "pyproject.toml": {
+      "bytes": 1986,
+      "sha256": "df0b8a4be6095342a351aba8c552c7268952e954f7a49c4f33e11f0a7175c937"
+    },
+    "scripts/autophagy_report.py": {
+      "bytes": 5123,
+      "sha256": "053bcabce55a7dfda0bd7a7753462ab782264571b660cd4eb6406870eacd0fec"
+    },
+    "scripts/golden_baseline.py": {
+      "bytes": 6581,
+      "sha256": "f27361c46517bc6ccdab649f51a7875380ddd05c003c5829e2438c5f529f57c0"
+    },
+    "scripts/health_guard.py": {
+      "bytes": 7909,
+      "sha256": "1ea4933b3e1a847ba226e530586f362c75ff92e1df08dd3069d3c6ba23381a71"
+    }
+  },
+  "generated_at": "2026-07-21T14:10:54+00:00",
+  "generated_by": "python scripts/golden_baseline.py refresh",
+  "policy": {
+    "destructive": false,
+    "refresh_requires_contract_when_existing": true,
+    "refresh_requires_human_intent": true,
+    "tracks_release_critical_files_only": true
+  },
+  "scope": "chronolith-legacy-golden-baseline",
+  "version": "1.0.0"
+}
