@@ -1,0 +1,150 @@
+name: PyPI Publish
+
+# Trusted Publishing (OIDC). PyPI verifies this workflow's identity directly,
+# so there is no API token in repository secrets, on a laptop, or in a .pypirc.
+# The previous version stored PYPI_API_TOKEN, a long-lived credential able to
+# publish all four packages under this account. Nothing to steal is stronger
+# than something guarded.
+#
+# One-time setup, once per project, at https://pypi.org/manage/account/publishing/
+# For each of chronolith, chronolith-lite, chronolith-pro, chronolith-omega:
+#     Owner:            SteveBlackbeard
+#     Repository name:  CHRONOLITH-by-Ethernium
+#     Workflow name:    pypi-publish.yml
+#     Environment name: pypi
+#
+# Then create the `pypi` environment under Settings -> Environments. A required
+# reviewer there means no release publishes without a human approving it.
+#
+# Once every project is configured, delete the PYPI_API_TOKEN secret. Leaving a
+# credential that nothing uses is strictly worse than not having one.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Publish ${{ matrix.package-path }}
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      # The entire authentication mechanism. No secret is read in this file.
+      id-token: write
+    strategy:
+      fail-fast: false
+      matrix:
+        package-path: [".", "chronolith-lite", "chronolith-pro", "chronolith-omega"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install build tooling
+        run: python -m pip install --upgrade pip build twine
+
+      - name: Build wheel and sdist
+        run: |
+          cd ${{ matrix.package-path }}
+          rm -rf dist/
+          python -m build
+
+      - name: Validate metadata
+        run: |
+          cd ${{ matrix.package-path }}
+          python -m twine check dist/*
+
+      # Installing the wheel first is what brings the edition's dependencies,
+      # so the tests need it. It is only safe because the suites now use
+      # sys.path.insert(0, ...): with append, each edition's root launcher
+      # shadowed the real module and a healthy package failed to import.
+      - name: Install the built wheel
+        run: |
+          cd ${{ matrix.package-path }}
+          pip install dist/*.whl
+
+      - name: Run the edition's tests
+        run: |
+          cd ${{ matrix.package-path }}
+          if [ -d tests ]; then
+            pip install pytest
+            python -m pytest tests -q
+          else
+            echo "no tests in ${{ matrix.package-path }}; skipping"
+          fi
+
+      # And this asks what the suites cannot: does the artifact that will
+      # actually be published import, and expose its entry point? A wheel can
+      # omit a module the source tree has, and no source test would notice.
+      - name: Smoke-test the built wheel
+        run: |
+          cd ${{ matrix.package-path }}
+          # Every edition ships a console script. Running --help proves the
+          # entry point resolves and the wheel's imports all load, which is
+          # precisely what a source-tree test cannot tell you.
+          python - <<'PY'
+          import importlib.metadata as md
+          import shutil
+          import subprocess
+          import sys
+          import sysconfig
+          from pathlib import Path
+
+          entries = {
+              ep.name: ep.value
+              for dist in md.distributions()
+              if (dist.metadata["Name"] or "").startswith("chronolith")
+              for ep in dist.entry_points
+              if ep.group == "console_scripts"
+          }
+          if not entries:
+              sys.exit("no console script found in the installed wheel")
+
+          def locate(name):
+              # PATH is not reliable across platforms and virtualenvs, and a
+              # check that only passes on the CI runner is not a check.
+              found = shutil.which(name)
+              if found:
+                  return found
+              bindir = Path(sysconfig.get_path("scripts"))
+              for candidate in (bindir / name, bindir / f"{name}.exe"):
+                  if candidate.exists():
+                      return str(candidate)
+              return None
+
+          for name, target in sorted(entries.items()):
+              # Import the module the entry point names. This is the check a
+              # source-tree test cannot make: the wheel may simply not contain it.
+              module = target.split(":")[0]
+              __import__(module)
+
+              script = locate(name)
+              if script is None:
+                  sys.exit(f"console script {name} was not installed")
+              # utf-8/replace: the CLIs print unicode that a cp1252 console
+              # cannot decode when captured, which raises in a reader thread
+              # and has nothing to do with whether the command works.
+              result = subprocess.run(
+                  [script, "--help"], capture_output=True, text=True,
+                  encoding="utf-8", errors="replace",
+              )
+              if result.returncode != 0:
+                  sys.exit(f"{name} --help failed:\n{result.stdout}\n{result.stderr}")
+              print(f"  {name} -> imports {module}, --help exits 0")
+
+          print(f"wheel smoke test passed: {sorted(entries)}")
+          PY
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: ${{ matrix.package-path }}/dist/
+          # Four packages share one run. When one fails and the others have
+          # already published, the retry must not fail on the versions that
+          # succeeded — PyPI rejects a re-upload of an existing version, and
+          # that rejection says nothing about the package being retried.
+          skip-existing: true

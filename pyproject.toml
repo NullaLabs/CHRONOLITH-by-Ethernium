@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=77.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chronolith"
+version = "3.2.2"
+authors = [
+  { name = "SteveBlackbeard" },
+]
+description = "One hash for a project's documentation, keyed by path: a rename or a byte changes it. Signed baselines, Merkle proofs, Bitcoin anchoring. Lite, Pro and Omega editions."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = ["ai", "context", "chronolith", "llm", "handover", "merkle-tree", "cybersecurity", "rag", "automation", "entropy", "governance"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Security :: Cryptography",
+]
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "pydantic>=2.0.0",
+    "networkx>=3.0",
+    "tiktoken>=0.5.0",
+    "cryptography>=42.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/SteveBlackbeard/CHRONOLITH-by-Ethernium"
+"Repository" = "https://github.com/SteveBlackbeard/CHRONOLITH-by-Ethernium"
+"Bug Tracker" = "https://github.com/SteveBlackbeard/CHRONOLITH-by-Ethernium/issues"
+
+[project.scripts]
+chronolith = "chronolith_pro.chronolith.run_chronolith_cycle:main"
+chronolith-lite = "chronolith_lite.chronolith.run_chronolith_lite:main"
+chronolith-pro = "chronolith_pro.chronolith.run_chronolith_cycle:main"
+chronolith-omega = "chronolith_omega.chronolith.run_chronolith_omega:main"
+chronolith-tokens = "chronolith_pro.chronolith.tokenator:main"
+
+[tool.setuptools.packages.find]
+where = ["chronolith-lite", "chronolith-pro", "chronolith-omega"]
+include = ["chronolith_lite*", "chronolith_pro*", "chronolith_omega*"]
