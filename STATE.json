@@ -1,23 +1,23 @@
 {
   "phase": "stable",
   "last_update": "2026-04-05T10:55:45.281220",
-  "signature": "8b642068fc5373c32c9d37c211ea4dd2ed1aefc136729d28c5c1d3028be30551",
-  "merkle_root": "579eae10a08aaa9e2194c03243b923cbe00d1d71b5315c8b8a8683b72a3c9ce4",
-  "last_check": "2026-07-21T14:02:55.027469",
+  "signature": "e8c10679581353aec67fe3e937e4677c1ecb94905e271dcbcfe115d6673dd2ce",
+  "merkle_root": "39b30c4eb1d639dda85245a907203ccec969887fe405d8dd864bb84fe3bc3298",
+  "last_check": "2026-07-30T02:45:00.674597",
   "physics": {
-    "H": 4.925262,
+    "H": 4.911711,
     "H_max": 5.459432,
-    "eta": 0.902157,
+    "eta": 0.899674,
     "N": 44,
-    "W": 131808,
-    "gini": -0.353597
+    "W": 133037,
+    "gini": -0.358908
   },
-  "drift_kl": 5e-06,
+  "drift_kl": 0.000412,
   "file_sizes": {
     "BENCHMARKS.md": 1480,
     "BUILD_DISCIPLINE.md": 3607,
     "CASE_STUDY_DRIFT.md": 2380,
-    "CHANGELOG.md": 5538,
+    "CHANGELOG.md": 6198,
     "CONTRIBUTING.md": 1678,
     "CONTRIBUTORS.md": 433,
     "ETHERNIUM_UNIVERSAL_DNA.md": 2101,
@@ -55,7 +55,7 @@
     "RELEASE_v2.1.0_ru.md": 2742,
     "RELEASE_v2.1.0_zh.md": 2018,
     "PROJECT_CONTEXT.md": 5249,
-    "README.md": 27483,
+    "README.md": 28052,
     "RELEASE_NOTES_MANIFEST.md": 6775,
     "SECURITY.md": 1628
   },
