@@ -132,6 +132,12 @@ def scan_for_secrets(repo_root: Path, ignore_list: list[str] = None) -> dict:
 
         try:
             content = path.read_text(encoding="utf-8")
+            # Explicit, per-file allowlist. A file may opt out of secret scanning
+            # by declaring this marker — reserved for fixtures that MUST contain
+            # sample secrets by design (e.g. the scanner's own test suite). Scoped
+            # to the single declaring file, so real secrets elsewhere still fail.
+            if "chronolith:allowlist-secrets" in content:
+                continue
             for name, pattern in SECRET_PATTERNS.items():
                 if re.search(pattern, content):
                     findings.append({

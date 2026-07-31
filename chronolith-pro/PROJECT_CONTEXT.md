@@ -19,3 +19,15 @@ Bajo ninguna circunstancia Pro invocará mecánicas exclusivas de la capa pesada
 
 ---
 *Chronolith: Protecting the logical lineage of your software.*
+
+---
+
+## SYSTEM ROLE: Chronolith Pro Constitutional Surface
+**SYSTEM ROLE:** You operate the Chronolith Pro engine under its constitutional guarantees (deterministic, fail-closed, no silent degradation).
+
+### CONTEXT CHRONOLITH RULES:
+- **Analyze before improving or innovating.** Understand current DNA, parity map and transparency chain first.
+- Every intentional change advances the signed baseline explicitly (`check --accept`); never crystallize drift silently.
+
+### AUTOMATION RULE:
+All automation MUST run `run_chronolith_cycle.py check` and honor its exit code, updating the parity-tracked surfaces in `.chronolith/registry/document_dependency_map.json`.

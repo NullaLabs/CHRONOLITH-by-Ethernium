@@ -38,3 +38,11 @@ pytest -q
 python -m build
 python -m twine check dist\*
 ```
+
+## CHRONOLITH Governance & Tooling
+
+This project is guarded by **CHRONOLITH** — the canonical-memory, DNA-integrity and
+repeatable-handoff engine for humans and AI operators.
+
+- **Bootstrap** a new governed project surface: `python tools/chronolith/bootstrap_project.py --repo-root .`
+- **Verify** DNA, document parity and secret hygiene before every push with the fail-closed guardian `run_chronolith_cycle.py`: `python -m chronolith_pro.chronolith.run_chronolith_cycle check --strict`

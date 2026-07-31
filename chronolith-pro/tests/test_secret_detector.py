@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Secret detector tests, with emphasis on private key material.
 
+This suite MUST contain sample credentials (fake AWS key, PEM) to exercise the
+scanner, so it opts out of secret scanning on itself: chronolith:allowlist-secrets
+
 Regression origin: `.chronolith/keys/sovereign.priv` — 32 raw bytes of an
 Ed25519 seed — sat tracked in this repository for three months while this
 scanner reported the tree clean. Two independent reasons:
