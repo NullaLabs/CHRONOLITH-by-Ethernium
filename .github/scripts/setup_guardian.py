@@ -21,7 +21,8 @@ def main():
     print(" CHRONOLITH: SENTINEL GUARDIAN SETUP ")
     print("==========================================================")
     
-    repo_root = Path(__file__).parent.resolve()
+    # Resolve from this file, never from the caller's current directory.
+    repo_root = Path(__file__).resolve().parents[2]
     
     # 1. Install Dependencies
     run_step("Installing industrial dependencies (Typer, Rich)", 
@@ -29,7 +30,7 @@ def main():
     
     # 2. Install Lite Edition as Editable
     run_step("Initializing Lite Edition", 
-             [sys.executable, "-m", "pip", "install", "-e", "chronolith-lite"])
+             [sys.executable, "-m", "pip", "install", "-e", str(repo_root / "chronolith-lite")])
     
     # 3. Forge Memory Core & Auto-Hooks
     # We call the newly refactored Typer CLI directly
@@ -40,7 +41,7 @@ def main():
     
     print("\n[✔] CHRONOLITH SYSTEM SOBERANO ACTIVADO.")
     print("[*] Your logical lineage is now guarded by the Sentinel (Git-Hooks).")
-    print("[*] Use 'chronolith-lite status' to view your current DNA parity.")
+    print("[*] Use 'chronolith-lite check' to view your current DNA parity.")
     print("==========================================================")
 
 if __name__ == "__main__":

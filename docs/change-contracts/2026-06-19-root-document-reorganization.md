@@ -47,7 +47,7 @@ Required:
 - `python scripts\autophagy_report.py`
 - `python scripts\golden_baseline.py verify`
 - `pytest -q`
-- `cd D:\Experimentos\ROBIN-HOOD; pytest tests -q`
+- `Set-Location $env:ROBIN_HOOD_ROOT; pytest tests -q`
 
 ## Rollback
 

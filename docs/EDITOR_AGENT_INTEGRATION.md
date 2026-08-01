@@ -43,11 +43,14 @@ python -m build
 ROBIN HOOD can be used beside Chronolith from its extracted repository:
 
 ```powershell
-cd D:\Experimentos\ROBIN-HOOD
+Set-Location $env:ROBIN_HOOD_ROOT
 pip install -e .
 agentops health --strict
 agentops scan --path adversarial_cases --source repo --fail-on-block
 ```
+
+`ROBIN_HOOD_ROOT` is an explicit deployment mount. Chronolith does not assume a
+drive letter, user profile or sibling layout.
 
 Do not make VS Code tasks part of the runtime package.
 

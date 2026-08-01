@@ -10,8 +10,8 @@ locally in one command:
     python scripts/audit_all.py            # isolated tests + cross-edition parity
     python scripts/audit_all.py --install  # also build+install each guardian in a clean venv
 
-Exit code 0 means every edition passes in isolation, the vendored core has not
-drifted between editions, and (with --install) the packages install and run.
+Exit code 0 means every edition passes in isolation, the repository contracts
+and vendored-core parity pass, and (with --install) the packages install and run.
 """
 
 from __future__ import annotations
@@ -56,11 +56,11 @@ def isolated_tests() -> None:
         check(f"{edition} tests", result.returncode == 0, tail)
 
 
-def parity_test() -> None:
-    print("== cross-edition core parity ==")
-    result = run([sys.executable, "-m", "pytest", str(REPO / "tests" / "test_edition_parity.py"), "-q"], cwd=REPO)
+def repository_contract_tests() -> None:
+    print("== repository contracts and cross-edition core parity ==")
+    result = run([sys.executable, "-m", "pytest", str(REPO / "tests"), "-q"], cwd=REPO)
     tail = (result.stdout.strip().splitlines() or [""])[-1]
-    check("core parity across editions", result.returncode == 0, tail)
+    check("repository contracts and core parity", result.returncode == 0, tail)
 
 
 def install_smoke() -> None:
@@ -88,7 +88,7 @@ def main() -> int:
     args = parser.parse_args()
 
     isolated_tests()
-    parity_test()
+    repository_contract_tests()
     if args.install:
         install_smoke()
 
@@ -96,7 +96,7 @@ def main() -> int:
     if FAILURES:
         print(f"AUDIT FAILED: {len(FAILURES)} check(s) -> {', '.join(FAILURES)}")
         return 1
-    print("AUDIT PASSED: editions green in isolation, core has not drifted" +
+    print("AUDIT PASSED: editions and repository contracts green, core has not drifted" +
           (", packages install clean." if args.install else "."))
     return 0
 

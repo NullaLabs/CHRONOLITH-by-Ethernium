@@ -8,10 +8,10 @@ Planned repository:
 https://github.com/SteveBlackbeard/ROBIN-HOOD-by-Ethernium
 ```
 
-Local extracted path:
+Optional deployment mount:
 
 ```text
-D:\Experimentos\ROBIN-HOOD
+ROBIN_HOOD_ROOT
 ```
 
 ## Role
@@ -45,7 +45,7 @@ Chronolith owns:
 From the ROBIN HOOD repository:
 
 ```powershell
-cd D:\Experimentos\ROBIN-HOOD
+Set-Location $env:ROBIN_HOOD_ROOT
 pip install -e .
 robinhood health --strict
 robinhood scan --path adversarial_cases --source repo --fail-on-block
@@ -56,7 +56,7 @@ robinhood select --path . --changed agentops/cli.py --max-tokens 4000
 Optional MCP server:
 
 ```powershell
-cd D:\Experimentos\ROBIN-HOOD
+Set-Location $env:ROBIN_HOOD_ROOT
 pip install -e .[mcp]
 robinhood-mcp
 ```

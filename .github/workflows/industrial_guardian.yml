@@ -94,7 +94,7 @@ jobs:
       run: pytest chronolith-omega/tests/test_omega_logic.py -v
 
   core-parity:
-    name: 🧬 Cross-Edition Core Parity
+    name: 🧬 Repository Contracts & Cross-Edition Core Parity
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
@@ -108,8 +108,8 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pytest typer rich cryptography
-    - name: Verify the vendored DNA core has not drifted between editions
-      run: pytest tests/test_edition_parity.py -v
+    - name: Verify repository contracts and vendored DNA core parity
+      run: pytest tests -v
 
   # --- Code Quality ---
   lint:

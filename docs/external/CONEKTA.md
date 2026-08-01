@@ -8,10 +8,10 @@ Planned repository:
 https://github.com/SteveBlackbeard/CONEKTA-by-Ethernium
 ```
 
-Local extracted path:
+Optional deployment mount:
 
 ```text
-D:\Experimentos\CONEKTA
+CONEKTA_ROOT
 ```
 
 ## Role
