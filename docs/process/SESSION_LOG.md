@@ -9,7 +9,7 @@
 
 ## 2026-05-01: FASE 1 - Consolidacion Topologica
 - Mantenimiento Node.js detenido.
-- Se ha movido Ethernium_Core a D:\Experimentos\ethernium\yggdrasil\01_CODE\INTERFACE\DISCORD_GATEWAY.
+- Se ha movido Ethernium_Core a `<legacy-ethernium-checkout>/yggdrasil/01_CODE/INTERFACE/DISCORD_GATEWAY`.
 - Estado: Completado.
 
 ## 2026-05-01: FASE 2+3 - Puente Sintergetico
@@ -34,7 +34,7 @@
 
 ## 2026-05-01: INSTALACION DE ENTORNO
 - Instalado Python 3.12 via winget
-- Creado venv en D:\Experimentos\ethernium\.venv
+- Creado venv en `<legacy-ethernium-checkout>/.venv`.
 - Validada correctamente Lattice DB inyectando 925 simbolos del Genoma Omega (superando error de unicode con UTF-8)
 - Creados scripts start-synkronia-gateway-bg.ps1 y launch-synkronia-gateway.ps1
 - Añadida llamada al Gateway en el arranque global de start-ethernium.ps1

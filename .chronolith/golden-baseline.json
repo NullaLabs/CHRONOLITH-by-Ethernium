@@ -1,5 +1,5 @@
 {
-  "change_contract": "docs/change-contracts/2026-07-29-dual-license-and-doc-honesty.md",
+  "change_contract": "docs/change-contracts/2026-08-01-portable-production-boundaries.md",
   "files": {
     ".chronolith/feature-registry.json": {
       "bytes": 2395,
@@ -10,8 +10,8 @@
       "sha256": "c828f3592c577d25af259697f2d96e5bf57cb15d85a3e595c5dd8cb2383c2912"
     },
     ".github/workflows/industrial_guardian.yml": {
-      "bytes": 4519,
-      "sha256": "86d5ccd6a4697a12ba267029db07f6d2a2b4895ac68b62f9597cb25d532ecdb3"
+      "bytes": 4514,
+      "sha256": "602a6a8249066b01efea94e0a7b1290959faacbed66ac0fd4717ededceaf7d28"
     },
     "GOVERNANCE.md": {
       "bytes": 1637,
@@ -58,7 +58,7 @@
       "sha256": "1ea4933b3e1a847ba226e530586f362c75ff92e1df08dd3069d3c6ba23381a71"
     }
   },
-  "generated_at": "2026-07-30T04:51:28+00:00",
+  "generated_at": "2026-08-01T14:59:36+00:00",
   "generated_by": "python scripts/golden_baseline.py refresh",
   "policy": {
     "destructive": false,

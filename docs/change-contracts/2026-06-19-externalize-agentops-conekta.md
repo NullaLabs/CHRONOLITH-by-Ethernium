@@ -15,10 +15,10 @@ ROBIN HOOD and CONEKTA are separate products:
 
 Keeping their source folders inside Legacy makes the root look less professional and risks confusing package/runtime boundaries.
 
-## External Paths
+## External Mounts
 
-- ROBIN HOOD: `D:\Experimentos\ROBIN-HOOD`
-- CONEKTA: `D:\Experimentos\CONEKTA`
+- ROBIN HOOD: `ROBIN_HOOD_ROOT`
+- CONEKTA: `CONEKTA_ROOT`
 
 ## Planned Repositories
 
@@ -57,12 +57,12 @@ Required in Chronolith:
 
 Required in extracted ROBIN HOOD:
 
-- `cd D:\Experimentos\ROBIN-HOOD`
+- `Set-Location $env:ROBIN_HOOD_ROOT`
 - `pytest tests -q`
 
 Required in extracted CONEKTA before its own publication:
 
-- `cd D:\Experimentos\CONEKTA`
+- `Set-Location $env:CONEKTA_ROOT`
 - `npm run lint`
 - `npm run build`
 

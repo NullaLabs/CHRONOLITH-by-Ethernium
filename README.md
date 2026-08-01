@@ -157,6 +157,7 @@ _Advanced RAG and cognitive mapping over the governed corpus._
 | [**Industrial Guide**](./HOW_TO_USE_IT.md) | [HOW_TO_USE_IT.md](./HOW_TO_USE_IT.md) |
 | [**Editor & Agent Integration**](./docs/EDITOR_AGENT_INTEGRATION.md) | VS Code, Cursor, MCP and agent-host boundary |
 | [**External Tools**](./docs/external/README.md) | Seneschal extraction notes |
+| [**Production Readiness**](./docs/PRODUCTION_READINESS.md) | Supported gates, portability contract and honest limits |
 | [**Release Manifest**](./RELEASE_NOTES_MANIFEST.md) | [RELEASE_NOTES_MANIFEST.md](./RELEASE_NOTES_MANIFEST.md) |
 
 ---
@@ -306,7 +307,7 @@ sequenceDiagram
 ## Operating Modes
 Chronolith can be integrated into your workflow in three main ways:
 
-1.  **Autonomous Mode (CLI)**: Run `chronolith-lite status` or `check` manually.
+1.  **Autonomous Mode (CLI)**: Run `chronolith-lite check` manually.
 2.  **Sentinel Mode (Automatic Guardian)**: Use `chronolith-lite init` to install Git-Hooks automatically.
 3.  **Auditor Mode (Manual DNA)**: Use the parity script to generate drift reports.
 

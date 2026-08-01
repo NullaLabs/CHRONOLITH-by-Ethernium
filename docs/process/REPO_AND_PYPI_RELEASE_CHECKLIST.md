@@ -98,7 +98,7 @@ So the honest conclusion is:
 ## Recommended next actions
 
 1. Reconcile local `main` with `origin/main` without reintroducing `nexus-dashboard/`.
-2. Keep CONEKTA changes in `D:\Experimentos\CONEKTA`.
+2. Keep CONEKTA changes in its own checkout, optionally mounted through `CONEKTA_ROOT`.
 3. Keep ROBIN HOOD external and outside the Python package runtime.
 4. Run a clean package build/install test.
 5. Tag only after the clean install passes.
