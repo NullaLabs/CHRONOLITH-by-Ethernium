@@ -14,9 +14,11 @@ Build Phase 1 of the Chronolith governance kernel while keeping ROBIN HOOD and C
 - Existing golden baseline refreshes require a reviewed contract under `docs/change-contracts/`.
 - CI runs both governance checks in `.github/workflows/industrial_guardian.yml`.
 - CI runs the health guard in strict mode.
-- ROBIN HOOD is external at `D:\Experimentos\ROBIN-HOOD` and is not a Chronolith dependency.
-- CONEKTA is external at `D:\Experimentos\CONEKTA`.
-- The former `nexus-dashboard/` source was extracted to `D:\Experimentos\CONEKTA`.
+- ROBIN HOOD is external as `component://robin_hood`; optional local discovery
+  uses `ROBIN_HOOD_ROOT`. It is not a Chronolith dependency.
+- CONEKTA is external as `component://conekta`; optional local discovery uses
+  `CONEKTA_ROOT`.
+- The former `nexus-dashboard/` source was extracted to the CONEKTA product.
 - `nexus-dashboard/` has been removed from this repository.
 
 ## Known Warnings
@@ -47,9 +49,10 @@ No autophagy action is destructive. Cleanup requires explicit human approval.
 
 1. Treat `pyproject.toml` and `VERSION` as aligned release metadata for `3.0.2`.
 2. Decide whether `_tmp_reglas_oro/` should be archived outside the repo, deleted, or converted into selected canonical governance docs.
-3. Fix inherited CONEKTA lint debt in `D:\Experimentos\CONEKTA`.
+3. Keep external integrations behind component contracts and optional root
+   variables; never encode a workstation path.
 4. Continue reducing autophagy attention targets when release pressure is low.
 
 ## Last Updated
 
-2026-06-17
+2026-08-01

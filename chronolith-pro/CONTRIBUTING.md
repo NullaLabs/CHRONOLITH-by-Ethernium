@@ -42,19 +42,26 @@ We are always looking for better ways to:
 
 3.  Make your changes.
 
-4.  **Run the Chronolith Cycle!** (See `tools/chronolith/run_chronolith_cycle.py`).
+4.  Run the repository governance checks from the repository root:
 
-5.  **Chronolith Proof**: Your PR must include a `outputs/chronolith/chronolith_cycle_report.json` showing a `status: ok` as proof of alignment.
+    ```bash
+    python scripts/health_guard.py --strict
+    python scripts/golden_baseline.py verify
+    python scripts/audit_all.py
+    ```
+
+5.  If a governed file changes, add a reviewed contract under
+    `docs/change-contracts/` and refresh the baseline with that exact contract.
 
 6.  Commit your changes with a clear message.
 
-7.  Push to your fork and open a Pull Request to the `Ethernium` branch.
+7.  Push to your fork and open a Pull Request to the `main` branch.
 
 
 
 ## 🏛️ Governance
 
-This project follows a merit-based governance model. Total project alignment is tracked via the chronolith system itself. See [MAINTAINERS.md](file:///d:/Experimentos/CHRONOLITH_LEGACY/MAINTAINERS.md) for more information on roles and leadership.
+This project follows a merit-based governance model. Total project alignment is tracked via the Chronolith system itself. See [MAINTAINERS.md](MAINTAINERS.md) for more information on roles and leadership.
 
 
 
