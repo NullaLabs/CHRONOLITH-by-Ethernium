@@ -23,6 +23,7 @@ omega-dashboard/
 **/.chronolith/hash_cache.json
 **/.chronolith/pro_report.json
 **/.chronolith/logs/
+**/.chronolith/ingest/
 
 # v3.0.3: Purge compiled bytecode artifacts from version control
 *.pyc
