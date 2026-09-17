@@ -1,6 +1,6 @@
 {
-  "merkle_root": "18301663649cbd0ace598eb9a3f6936f1b5908c86a42cd08bdfe2294340ec907",
+  "merkle_root": "28f62f808892486f99f5b6625b05a3081578f4939f40dea7fa11cfb6eb0dabe1",
   "leaf_format": "path-bound-v1",
-  "last_check": "2026-07-31T10:43:18.468940+00:00",
-  "signature": "13de0e70caee7af6a8d3fbb470b5bc5879da09d8b8771a9a271b564e2e01a50a"
+  "last_check": "2026-09-17T07:55:45.358907+00:00",
+  "signature": "b93d87d89df36be755ba5f75bdba756c0cf294a1aa0c360f41611f834baceedf"
 }
